@@ -1,0 +1,15 @@
+{
+  "name": "template-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-master": "tailwindcss build -i Assets/Stylesheets/MasterInject.css -o Assets/Stylesheets/Tailwind.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^2.2.19"
+  }
+}
