@@ -6,7 +6,8 @@ body, html {
 }
 
 .wrapper {
-    background-color: #0078d4;
+    /*background-color: #0078d4;*/
+    background: linear-gradient(11deg, rgba(49,150,156,1) 54%, rgba(255,255,255,1) 100%);;
 }
 
 .tabs {
@@ -55,6 +56,33 @@ body, html {
     z-index: 1;
     transition-duration: 0.6s;
     border-bottom: #ffffff 2px solid;
+}
+/*Scroll Bar*/
+
+body::-webkit-scrollbar {
+    width: 0.4em;
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 40px;
+    outline: 1px solid slategrey;
+}
+
+/*Presenter*/
+section:first-of-type{
+    /*background-image: url("../Images/wp7537837.png");*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Images/wp7537837.png');;
+    background-size: cover;
+}
+
+section:first-of-type div{
+    backdrop-filter: blur(15px);
 }
 
 
