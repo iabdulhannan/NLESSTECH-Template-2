@@ -3,42 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <title>NLESSTECH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="Assets/Scripts/index.js"></script>
     <link href="Assets/Stylesheets/Tailwind.css" rel="stylesheet">
     <link href="Assets/Stylesheets/index.css" rel="stylesheet">
+
 </head>
 <body>
-<nav class="wrapper flex items-center gap-x-6 px-5 py-2 fixed w-full z-10">
-    <div class="">
-        <span class="font-bold text-white">LOGO</span>
-        <span class="font-semibold text-white">NLESSTECH</span>
-    </div>
-    <div class="tabs">
-        <div class="selector"></div>
-        <a href="#" class="active">Home</a>
-        <a href="#">Services</a>
-        <a href="#">Products</a>
-        <a href="#">About Us</a>
-    </div>
-    <div>
-        <button class="border border-white rounded-md text-white py-1 px-3 hover:underline">Demo</button>
-    </div>
-</nav>
-<main class="h-full">
+<header>
+
+    <nav class="wrapper flex items-center gap-x-6 px-5 py-2 fixed w-full z-10">
+        <div class="">
+            <span class="font-bold text-white">LOGO</span>
+            <span class="font-semibold text-white">NLESSTECH</span>
+        </div>
+        <div class="tabs">
+            <div class="selector"></div>
+            <a href="#" class="active">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Products</a>
+            <a href="#">About Us</a>
+        </div>
+        <div>
+            <button class="border border-white rounded-md text-white py-1 px-3 hover:underline">Demo</button>
+        </div>
+    </nav>
+
+</header>
+<main class="pt-14 sm:pt-12 lg:pt-20 ">
     <!--    Presenter Page-->
-    <section class="h-1/2 lg:min-h-screen flex flex-col justify-center items-center">
-        <div class="h-full w-full lg:min-h-screen flex flex-col gap-y-5 items-center justify-center">
-            <label class="text-white text-center font-bold font-bold text-6xl">
-                There is something<br>that we do
-            </label>
-            <label class="text-white">Business Process and Data-Driven Communication Automation</label>
+        <!--<section class="h-1/2 lg:min-h-screen flex flex-col justify-center items-center">
+            <div class="h-full w-full lg:min-h-screen flex flex-col gap-y-5 items-center justify-center">
+                <label class="text-white text-center font-bold font-bold text-6xl">
+                    There is something<br>that we do
+                </label>
+                <label class="text-white">Business Process and Data-Driven Communication Automation</label>
+            </div>
+        </section>-->
+
+    <!-- Slideshow container -->
+    <section class="h-2/3 mt-20 sm:h-1/2 md:h-72">
+        <div class="relative w-full h-full">
+
+            <!--            Slide 1         -->
+            <div class="mySlides fade h-full">
+                <div class="flex py-6 px-2 sm:p-12 h-full" style="background-image: url('Assets/Images/pexels-dominika-roseclay-1036808.jpg');background-size: cover">
+                    <div class="w-1/2 hidden sm:block"></div>
+                    <div class="sm:w-1/2 flex flex-col justify-center items-center gap-y-5">
+                        <label class="font-bold text-xl sm:text-3xl text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has </label>
+                        <a href="#" class="py-1 px-2 sm:py-2 sm:px-3 text-md sm:text-xl border border-black rounded-lg hover:underline">Know More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--            Slide 2         -->
+            <div class="mySlides fade h-full">
+                <div class="flex py-6 px-2 sm:p-12 h-full" style="background-image: url('Assets/Images/pexels-felix-mittermeier-956999.jpg');background-size: cover">
+                    <div class="w-1/2 hidden sm:block"></div>
+                    <div class="sm:w-1/2 flex flex-col justify-center items-center gap-y-5 text-white">
+                        <label class="font-bold text-xl sm:text-3xl text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has </label>
+                        <a href="#" class="py-1 px-2 sm:py-2 sm:px-3 text-md sm:text-xl border border-white rounded-lg hover:underline">Know More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <!-- The dots/circles -->
+        <div class="mt-5 text-center">
+            <span name="dot" class="dot" onclick="currentSlide(1)"></span>
+            <span name="dot" class="dot" onclick="currentSlide(2)"></span>
+        </div>
+
+    </section>
+
+    <!--    Services-->
+    <section name="services">
+        <h1 class="text-center text-4xl font-bold pt-12 pb-5">What do we do?</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row place-items-center w-full p-10">
+
+            <div class="flex justify-center text-center text-xl items-center w-full p-5">
+                <label>Here is what<br> we do with <br><span class="font-bold" style="color: rgba(49,150,156,1)">Excellence</span></label>
+            </div>
+
+            <div class="relative flex flex-col justify-center text-center items-center w-full p-5">
+                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/githubIcon.svg">
+                <div class="flex flex-col justify-between border-4 px-7 py-5 sm:py-10 rounded-3xl sm:h-44">
+                    <label class="block text-xl">Software Integration</label>
+                    <label class="block text-sm">Lorem Ipsum has been the industry's standard dummy text ever since the
+                        1500s</label>
+                </div>
+            </div>
+
+            <div class="relative flex flex-col justify-center text-center items-center w-full p-5">
+                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/githubIcon.svg">
+                <div class="flex flex-col justify-between border-4 px-7 py-5 sm:py-10 rounded-3xl sm:h-44">
+                    <label class="block text-xl">Complete and Tailored Training Programs</label>
+                    <label class="block text-sm">Lorem Ipsum has been the industry's standard dummy text ever since the
+                        1500s</label>
+                </div>
+            </div>
+
+            <div class="relative flex flex-col justify-center text-center items-center w-full p-5">
+                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/githubIcon.svg">
+                <div class="flex flex-col justify-between border-4 px-7 py-5 sm:py-10 rounded-3xl sm:h-44">
+                    <label class="block text-xl">Document design</label>
+                    <label class="block text-sm">Lorem Ipsum has been the industry's standard dummy text ever since the
+                        1500s</label>
+                </div>
+            </div>
+
+            <div class="relative flex flex-col justify-center text-center items-center w-full p-5">
+                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/githubIcon.svg">
+                <div class="flex flex-col justify-between border-4 px-7 py-5 sm:py-10 rounded-3xl sm:h-44">
+                    <label class="block text-xl">Support</label>
+                    <label class="block text-sm">Lorem Ipsum has been the industry's standard dummy text ever since the
+                        1500s</label>
+                </div>
+            </div>
+
+            <div class="relative flex flex-col justify-center text-center items-center w-full p-5">
+                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/githubIcon.svg">
+                <div class="flex flex-col justify-between border-4 px-7 py-5 sm:py-10 rounded-3xl sm:h-44">
+                    <label class="block text-xl">Custom Development</label>
+                    <label class="block text-sm">Lorem Ipsum has been the industry's standard dummy text ever since the
+                        1500s</label>
+                </div>
+            </div>
+
+
         </div>
     </section>
 </main>
-<footer>
-    <div class="flex p-12">
+
+
+<footer class="bottom-0">
+    <div class="flex p-12 h-auto">
         <div class="flex flex-col items-center gap-y-2">
             <div class="flex gap-x-3">
                 <span class="font-bold text-xl">LOGO</span>
@@ -55,3 +160,60 @@
 </footer>
 </body>
 </html>
+<script>
+    // var slideIndex = 1;
+    // showSlides(slideIndex);
+
+    let slideIndex = 0;
+    showSlidesAutomatically();
+
+    // Next/previous controls
+    function plusSlides(n) {
+        moveSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        moveSlides(slideIndex = n);
+    }
+
+    function moveSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        // console.log(dots.length)
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" activeNext", "");
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].classList.add("activeNext");
+    }
+
+    //
+
+
+    function showSlidesAutomatically() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlidesAutomatically, 2000); // Change image every 2 seconds
+    }
+</script>
