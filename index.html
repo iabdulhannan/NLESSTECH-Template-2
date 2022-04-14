@@ -12,7 +12,7 @@
 
 </head>
 <body>
-<header>
+<header class="hidden sm:block">
     <!--    <a href="#services">Services</a>-->
     <!--    <a href="#products">Products</a>-->
 
@@ -23,17 +23,53 @@
         </div>
         <div class="tabs">
             <div class="selector"></div>
-            <a href="#" class="active">Home</a>
+            <a href="#" class="active" onclick="window.location = '#home'">Home</a>
             <a href="#services" onclick="window.location = '#services'">Services</a>
             <a href="#products" onclick="window.location = '#products'">Products</a>
-            <a href="#">About Us</a>
+            <a href="#" onclick="window.location = '#aboutUs'">About Us</a>
         </div>
         <div>
-            <button class="border border-white rounded-md text-white py-1 px-3 hover:underline">Demo</button>
+            <button class="border border-white rounded-md text-white py-1 px-3 hover:underline"
+                    onclick="window.location = 'Pages/contactForm.html' ">Demo
+            </button>
         </div>
     </nav>
 
 </header>
+<header class="block sm:hidden fixed w-full z-20">
+    <div>
+
+        <nav class="relative wrapper flex justify-center items-center gap-x-6 px-5 py-2 fixed w-full z-20 h-20">
+            <div id="nav-icon3" class="absolute left-5">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="">
+                <span class="font-bold text-white text-3xl">$</span>
+                <span class="font-semibold text-white text-3xl">&nbsp;NLESSTECH</span>
+            </div>
+        </nav>
+        <div id="emergerMenu"
+             class="absolute top-0 w-full bg-gray-200 h-screen pt-28 text-3xl text-center space-y-16 overflow-hidden z-10"
+             style="right: 100%">
+            <div class="p-5" style="border-bottom-color: #31969c; border-width: 1px">
+                <a onclick="window.location = '#home'">Home</a>
+            </div>
+            <div class="p-5" style="border-bottom-color: #31969c; border-width: 1px">
+                <a onclick="window.location = '#services'">Services</a>
+            </div>
+            <div class="p-5" style="border-bottom-color: #31969c; border-width: 1px">
+                <a onclick="window.location = '#services'">Products</a>
+            </div>
+            <div class="p-5" style="border-bottom-color: #31969c; border-width: 1px">
+                <a onclick="window.location = '#aboutUs'">About Us</a>
+            </div>
+        </div>
+    </div>
+</header>
+
 
 <main class="pt-14 sm:pt-12 lg:pt-20 ">
     <!--    Presenter Page-->
@@ -56,11 +92,11 @@
                      style="background-image: url('Assets/Images/pexels-dominika-roseclay-1036808.jpg');background-size: cover">
                     <div class="w-1/2 hidden sm:block"></div>
                     <div class="sm:w-1/2 flex flex-col justify-center items-center gap-y-5">
-                        <label class="font-bold text-xl sm:text-3xl text-center">Lorem Ipsum is simply dummy text of the
-                            printing and typesetting industry. Lorem Ipsum has </label>
-                        <a href="#"
+                        <label class="font-bold text-xl sm:text-3xl text-center">A intelligent way to manage
+                            your document centric processes</label>
+                        <!--<a href="#"
                            class="py-1 px-2 sm:py-2 sm:px-3 text-md sm:text-xl border border-black rounded-lg hover:underline">Know
-                            More</a>
+                            More</a>-->
                     </div>
                 </div>
             </div>
@@ -71,11 +107,11 @@
                      style="background-image: url('Assets/Images/pexels-felix-mittermeier-956999.jpg');background-size: cover">
                     <div class="w-1/2 hidden sm:block"></div>
                     <div class="sm:w-1/2 flex flex-col justify-center items-center gap-y-5 text-white">
-                        <label class="font-bold text-xl sm:text-3xl text-center">Lorem Ipsum is simply dummy text of the
-                            printing and typesetting industry. Lorem Ipsum has </label>
-                        <a href="#"
-                           class="py-1 px-2 sm:py-2 sm:px-3 text-md sm:text-xl border border-white rounded-lg hover:underline">Know
-                            More</a>
+                        <label class="font-bold text-xl sm:text-3xl text-center">Digitize your paper based environment
+                            by using the industry standard product</label>
+                        <!--                        <a href="#"-->
+                        <!--                           class="py-1 px-2 sm:py-2 sm:px-3 text-md sm:text-xl border border-white rounded-lg hover:underline">Know-->
+                        <!--                            More</a>-->
                     </div>
                 </div>
             </div>
@@ -106,7 +142,8 @@
                 <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/cross-platform.svg">
                 <div class="flex flex-col justify-between border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">Cross Platform Mobile Application Development</label>
-                    <label class="block text-sm overflow-hidden max-h-10 mt-1">We do offer the Mobile Application
+                    <label class="block text-sm overflow-hidden sm:max-h-10 min-h-1rem mt-1">We do offer the Mobile
+                        Application
                         development services for the platform
                         like android, iOs .We analyze, design and develop cross-platform applications for our customers
                         to create their mobile
@@ -121,7 +158,7 @@
                 <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/data-management.svg">
                 <div class="flex flex-col justify-between border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">ECM Professional Services</label>
-                    <label class="block text-sm overflow-hidden max-h-10 mt-7">
+                    <label class="block text-sm overflow-hidden sm:max-h-10 min-h-1rem mt-7">
                         NLessTech is having the dedicated ECM professional team with a depth of skill set, including
                         development and integration, support, training, and strategic consultant who assist in aligning
                         the solution to your business objectives and needs. We are dealing with the industry-leading
@@ -384,14 +421,30 @@
 
 
 <footer class="bottom-0">
-    <div class="flex p-12 h-auto">
-        <div class="flex flex-col items-center gap-y-2">
+    <div class="flex flex-col md:flex-row p-12 h-auto space-y-10">
+        <div class="md:w-1/2 text-xs text-justify" id="aboutUs">
+            <h1 class="font-semibold text-sm">About Us</h1>
+            <p>For a decade NLessTech has been helping businesses to communicate more efficiently and cost-effectively
+                through the use of the globally renown e-form variable data printing solution PlanetPress Suite and OL
+                Connect, developed by Objectiflune and distributed in the Middle East and North Africa by NLessTech.
+                With a twin focus on customer satisfaction and technological innovation, the company has become the
+                trusted, credible expert in printing, messaging, distribution and other management and financial
+                services related to paper communications. NLessTech has a single strategy of delivering value to
+                customers. A single trusted solution with a unified approach to the market, which is the engine of the
+                company’s
+                operations. Everything you deliver to a customer – whether on paper or electronically– is an opportunity
+                to expand
+                your relationship. By linking the physical and digital worlds, NLessTech helps make communication
+                between you and your customers flow better.
+            </p>
+        </div>
+        <div class="flex flex-col justify-center items-center gap-y-2 md:w-1/2">
             <div class="flex gap-x-3">
                 <span class="font-bold text-xl">LOGO</span>
                 <span class="font-light text-xl">NLESSTECH</span>
             </div>
             <label>support@nlesstech.com</label>
-            <div class="flex w-full justify-around">
+            <div class="flex w-1/4 justify-around">
                 <img src="Assets/Icons/youtube-svgrepo-com.svg" width="25">
                 <img src="Assets/Icons/twitterIcon.svg">
                 <img src="Assets/Icons/linkedinIcon.svg">
@@ -459,22 +512,44 @@
     // });
     $('div[name="service"] > div').click(function () {
         // $(this).toggleClass("sm:h-44")
-        if ($(this).hasClass("collapsed")) {
-            $(':not(:first-child)', this).removeClass("max-h-10")
-            $(this).animate({
-                maxHeight: "20rem"
-            }, 1000)
-            $(this).removeClass("collapsed")
-        } else {
-            $(this).animate({
-                maxHeight: "11rem"
-            }, 1000)
 
-            setTimeout(() => {
-                $(this).addClass("collapsed")
-                $(':not(:first-child)', this).addClass("max-h-10")
-            }, 1000);
-            // $(this).addClass("sm:h-44")
+        if ($(window).width() <= 500) {
+            // do your stuff
+            if ($(this).hasClass("collapsed")) {
+                $(':not(:first-child)', this).removeClass("max-h-10")
+                $(this).animate({
+                    maxHeight: "25rem"
+                }, 1000)
+                $(this).removeClass("collapsed")
+            } else {
+                $(this).animate({
+                    maxHeight: "11rem"
+                }, 1000)
+
+                setTimeout(() => {
+                    $(this).addClass("collapsed")
+                    $(':not(:first-child)', this).addClass("max-h-10")
+                }, 1000);
+                // $(this).addClass("sm:h-44")
+            }
+        } else {
+            if ($(this).hasClass("collapsed")) {
+                $(':not(:first-child)', this).removeClass("max-h-10")
+                $(this).animate({
+                    maxHeight: "20rem"
+                }, 1000)
+                $(this).removeClass("collapsed")
+            } else {
+                $(this).animate({
+                    maxHeight: "11rem"
+                }, 1000)
+
+                setTimeout(() => {
+                    $(this).addClass("collapsed")
+                    $(':not(:first-child)', this).addClass("max-h-10")
+                }, 1000);
+                // $(this).addClass("sm:h-44")
+            }
         }
     })
 

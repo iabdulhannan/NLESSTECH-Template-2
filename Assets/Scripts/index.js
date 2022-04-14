@@ -26,6 +26,33 @@ window.onload = function () {
         });
 
 
+        /*Burger Menu*/
+        $('#nav-icon3').click(function () {
+            $(this).toggleClass('open');
+
+            if ($('#emergerMenu').hasClass("fixed")) {
+                $('#emergerMenu').removeClass("fixed").addClass("absolute")
+                $('#emergerMenu').animate({
+                    right: "100%"
+                }, 1000)
+
+            } else {
+
+                $('#emergerMenu').animate({
+                    right: "0"
+                }, 1000).addClass("fixed").removeClass("absolute")
+            }
+
+        });
+
+        $('#emergerMenu a').click(function () {
+            $('#emergerMenu').removeClass("fixed").addClass("absolute")
+            $('#emergerMenu').animate({
+                right: "100%"
+            }, 1000).removeClass("menuExpanded")
+
+        });
+
 
         $(document).scroll(function () {
             var y = $(this).scrollTop();
@@ -41,7 +68,6 @@ window.onload = function () {
 
 
     })
-
 
 
 }

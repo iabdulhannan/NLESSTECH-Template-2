@@ -11,6 +11,9 @@
 .min-h-20{
     min-height: 5rem;
 }
+.min-h-1rem{
+    min-height: 1.5rem;
+}
 @media (min-width: 1280px) {
     .xl\:max-w-1\/2 {
         max-width: 50%;
@@ -21,6 +24,10 @@
     .min-h-20{
         min-height: 5rem;
     }
+    .min-h-1rem{
+        min-height: 1.5rem;
+    }
+
 }
 
 @media (min-width: 1024px) {
@@ -34,6 +41,10 @@
     .min-h-20{
         min-height: 5rem;
     }
+    .min-h-1rem{
+        min-height: 1.5rem;
+    }
+
 }
 
 @media (min-width: 768px) {
@@ -47,6 +58,10 @@
     .min-h-20{
         min-height: 5rem;
     }
+    .min-h-1rem{
+        min-height: 1.5rem;
+    }
+
 }
 
 @media (min-width: 640px) {
@@ -60,6 +75,10 @@
     .min-h-20{
         min-height: 5rem;
     }
+    .min-h-1rem{
+        min-height: 1.5rem;
+    }
+
 }
 
 @tailwind utilities;
