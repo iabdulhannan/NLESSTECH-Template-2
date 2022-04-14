@@ -6,8 +6,6 @@ window.onload = function () {
         /*Navigation Bar*/
 
         var tabs = $('.tabs');
-        var selector = $('.tabs').find('a').length;
-        //var selector = $(".tabs").find(".selector");
         var activeItem = tabs.find('.active');
         var activeWidth = activeItem.innerWidth();
         $(".selector").css({
@@ -27,6 +25,23 @@ window.onload = function () {
             });
         });
 
+
+
+        $(document).scroll(function () {
+            var y = $(this).scrollTop();
+            let height = $('section:first-of-type').height();
+            if (y > height) {
+                $('.socialIconsDiv').fadeIn();
+            } else {
+                $('.socialIconsDiv').fadeOut();
+            }
+
+
+        });
+
+
     })
+
+
 
 }

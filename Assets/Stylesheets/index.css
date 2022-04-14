@@ -15,11 +15,12 @@ body, html {
     background-color: #ffffff;
     box-sizing: border-box;
     font-family: Poppins-Regular;
+    scroll-behavior: smooth;
 }
 
 .wrapper {
     /*background-color: #0078d4;*/
-    background: linear-gradient(11deg, rgba(49,150,156,1) 54%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(11deg, rgba(49, 150, 156, 1) 54%, rgba(255, 255, 255, 1) 100%);
 }
 
 .tabs {
@@ -69,6 +70,7 @@ body, html {
     transition-duration: 0.6s;
     border-bottom: #ffffff 2px solid;
 }
+
 /*Scroll Bar*/
 
 body::-webkit-scrollbar {
@@ -96,27 +98,47 @@ body::-webkit-scrollbar-thumb {
 /*    backdrop-filter: blur(15px);*/
 /*}*/
 
-section[name="services"] > div div:hover{
+section[name="services"] > div div:hover {
     transform: scale(1.01);
 }
 
-
-section[name="services"] > div img{
-    top: -2px;left: 7%;z-index: 1;
+section[name="services"] > div div:hover img {
+    z-index: 1;
 }
-@media (min-width: 450px){
-    section[name="services"] > div img{
-        top: -10px;left: 7%;z-index: 1;
+
+
+section[name="services"] > div img {
+    top: -2px;
+    left: 7%;
+    /*z-index: 1;*/
+}
+
+@media (min-width: 450px) {
+    section[name="services"] > div img {
+        top: -10px;
+        left: 7%;
+        /*z-index: 1;*/
     }
 
 }
 
 
-section[name="services"] > div div{
-    border-color: rgba(49,150,156,1);
+section[name="services"] > div div {
+    border-color: rgba(49, 150, 156, 1);
     /*border-image: linear-gradient(11deg, rgba(49,150,156,1) 54%, rgba(255,255,255,1) 100%);*/
     /*border-image-source: linear-gradient(to left, rgba(49,150,156,1), rgba(255,255,255,1));*/
     /*border-image-slice: 1;*/
+}
+
+.collapsed {
+    max-height: 11rem;
+    height: 11rem;
+    /*overflow: hidden;*/
+    /*transition: all .2s ease;*/
+}
+
+div[name='service'] * {
+    cursor: pointer;
 }
 
 /*Carousel*/
@@ -162,7 +184,7 @@ section[name="services"] > div div{
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* The dots/bullets/indicators */
@@ -190,17 +212,204 @@ section[name="services"] > div div{
 }
 
 @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
 
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/*Product Slides*/
+
+/* Slideshow container */
+section[name='products'] .slideshow-container {
+    /*max-width: fit-content;*/
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+section[name='products'] .myProducts {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prevProd, .nextProd {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.nextProd {
+    right: 0;
+}
+
+/* Position the "next button" to the right */
+section[name='products'].nextProd {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+section[name='products'] .prevProd:hover, .nextProd:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* The dots/bullets/indicators */
+section[name='products'] .dotProduct {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+
+/* Fading animation */
+section[name='products'].fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+section[name='products'].active {
+    color: #717171;
+}
+
+section[name='products'].active_1, section[name='products'].dotProduct:hover {
+    background-color: black;
+}
+
+section[name='products'].nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    font-size: 14px;
+}
+
+section[name='products'].stick {
+    background-color: #4A90E2;
+}
+
+section[name='products'] a {
+    color: #31969c;
+}
+
+.myProducts > div > div {
+    height: 30rem;
+}
+
+
+@media (max-width: 1024px) {
+
+    .myProducts > div > div {
+        height: 33rem;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .myProducts > div > div {
+        height: 50rem;
+    }
+}
+@media (max-width: 600px) {
+    .myProducts > div > div {
+        height: 55rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .myProducts > div > div {
+        height: 70rem;
+    }
+}
+
+/*Social Icons*/
+.social-btn {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    margin: 5px;
+    transition: 1s;
+}
+
+.social-btn span {
+    width: 0px;
+    overflow: hidden;
+    transition: 1s;
+    text-align: center;
+}
+
+.social-btn:hover {
+    width: 150px;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+
+.social-btn:hover span {
+    padding: 2px;
+    width: max-content;
+}
+
+.socialIconsDiv {
+    display: none;
+    position: fixed;
 }
 
 
 /*Footer*/
-footer{
+footer {
     background-color: #f8f9fa;
 }
