@@ -12,21 +12,18 @@
 
 </head>
 <body>
-<header class="hidden sm:block">
-    <!--    <a href="#services">Services</a>-->
-    <!--    <a href="#products">Products</a>-->
-
-    <nav class="wrapper flex items-center gap-x-6 px-5 py-2 fixed w-full z-10">
+<header class="hidden md:block h-14">
+    <nav class="wrapper flex items-center gap-x-6 px-5 py-2 fixed w-full z-10 h-14">
         <div class="">
             <span class="font-bold text-white">LOGO</span>
             <span class="font-semibold text-white">NLESSTECH</span>
         </div>
         <div class="tabs">
             <div class="selector"></div>
-            <a href="#" class="active" onclick="window.location = '#home'">Home</a>
-            <a href="#services" onclick="window.location = '#services'">Services</a>
-            <a href="#products" onclick="window.location = '#products'">Products</a>
-            <a href="#" onclick="window.location = '#aboutUs'">About Us</a>
+            <a slideTo="home" href="#" class="active" onclick="window.location = '#home'">Home</a>
+            <a slideTo="services" href="#services" onclick="window.location = '#services'">Services</a>
+            <a slideTo="products" href="#products" onclick="window.location = '#products'">Products</a>
+            <a slideTo="aboutUs" href="#" onclick="window.location = '#aboutUs'">About Us</a>
         </div>
         <div>
             <button class="border border-white rounded-md text-white py-1 px-3 hover:underline"
@@ -34,13 +31,11 @@
             </button>
         </div>
     </nav>
-
 </header>
-<header class="block sm:hidden fixed w-full z-20">
-    <div>
-
-        <nav class="relative wrapper flex justify-center items-center gap-x-6 px-5 py-2 fixed w-full z-20 h-20">
-            <div id="nav-icon3" class="absolute left-5">
+<header class="block md:hidden h-14">
+    <div class="fixed w-full h-14 z-10">
+        <nav class="relative wrapper flex justify-center items-center gap-x-6 px-5 py-2 fixed w-full z-20 h-14">
+            <div id="nav-icon3" class="absolute left-5" style="top: -35px">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -52,7 +47,7 @@
             </div>
         </nav>
         <div id="emergerMenu"
-             class="absolute top-0 w-full bg-gray-200 h-screen pt-28 text-3xl text-center space-y-16 overflow-hidden z-10"
+             class="absolute top-0 w-full bg-gray-200 h-screen pt-14 text-2xl text-center overflow-hidden z-10"
              style="right: 100%">
             <div class="p-5" style="border-bottom-color: #31969c; border-width: 1px">
                 <a onclick="window.location = '#home'">Home</a>
@@ -66,12 +61,29 @@
             <div class="p-5" style="border-bottom-color: #31969c; border-width: 1px">
                 <a onclick="window.location = '#aboutUs'">About Us</a>
             </div>
+            <div class="flex flex-col justify-center items-center w-full absolute bottom-2">
+                <label class="p-2 text-xl">Contact Us</label>
+                <div class="flex w-1/2 justify-around space-x-2 my-5">
+                    <a class="w-1/3 p-1">
+                        <img src="Assets/Icons/youtube-svgrepo-com.svg" class="w-full">
+                    </a>
+                    <a class="w-1/3 p-1">
+                        <img src="Assets/Icons/twitterIcon.svg" class="w-full">
+                    </a>
+                    <a class="w-1/3 p-1">
+                        <img src="Assets/Icons/linkedinIcon.svg" class="w-full">
+                    </a>
+                </div>
+            </div>
+
         </div>
     </div>
 </header>
 
 
-<main class="pt-14 sm:pt-12 lg:pt-20 ">
+<!--<main class="pt-14 sm:pt-12 lg:pt-20">-->
+<main class="h-full">
+    <!--<main>-->
     <!--    Presenter Page-->
     <!--<section class="h-1/2 lg:min-h-screen flex flex-col justify-center items-center">
         <div class="h-full w-full lg:min-h-screen flex flex-col gap-y-5 items-center justify-center">
@@ -83,12 +95,15 @@
     </section>-->
 
     <!-- Slideshow container -->
-    <section class="h-2/3 mt-20 sm:h-1/2 md:h-72" id="home">
+    <!--    <section class="mt-14">-->
+    <!--        <div class="relative w-full h-2/3 sm:h-1/2 md:h-72" >-->
+
+    <section class="h-1/2 md:h-72" id="home">
         <div class="relative w-full h-full">
 
             <!--            Slide 1         -->
             <div class="mySlides fade h-full">
-                <div class="flex py-6 px-2 sm:p-12 h-full"
+                <div class="flex p-12 h-full"
                      style="background-image: url('Assets/Images/pexels-dominika-roseclay-1036808.jpg');background-size: cover">
                     <div class="w-1/2 hidden sm:block"></div>
                     <div class="sm:w-1/2 flex flex-col justify-center items-center gap-y-5">
@@ -103,7 +118,7 @@
 
             <!--            Slide 2         -->
             <div class="mySlides fade h-full">
-                <div class="flex py-6 px-2 sm:p-12 h-full"
+                <div class="flex p-12 h-full"
                      style="background-image: url('Assets/Images/pexels-felix-mittermeier-956999.jpg');background-size: cover">
                     <div class="w-1/2 hidden sm:block"></div>
                     <div class="sm:w-1/2 flex flex-col justify-center items-center gap-y-5 text-white">
@@ -121,10 +136,12 @@
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <!-- The dots/circles -->
-        <div class="mt-5 text-center">
-            <span name="dot" class="dot" onclick="currentSlide(1)"></span>
-            <span name="dot" class="dot" onclick="currentSlide(2)"></span>
-        </div>
+        <!--
+                <div class="mt-5 text-center">
+                    <span name="dot" class="dot" onclick="currentSlide(1)"></span>
+                    <span name="dot" class="dot" onclick="currentSlide(2)"></span>
+                </div>
+        -->
 
     </section>
 
@@ -140,9 +157,10 @@
 
             <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6">
                 <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/cross-platform.svg">
-                <div class="flex flex-col justify-between border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
+                <div class="flex flex-col gap-y-2 justify-between border-4 px-7 pt-10 rounded-3xl pb-8 overflow-hidden collapsed">
                     <label class="block text-xl">Cross Platform Mobile Application Development</label>
-                    <label class="block text-sm overflow-hidden sm:max-h-10 min-h-1rem mt-1">We do offer the Mobile
+                    <label class="block text-sm overflow-hidden min-h-1rem leading-5 max-h-5">We do offer the Mobile
+                        <!--                    <label class="block text-sm overflow-hidden min-h-1rem mt-1 leading-5" style="height: 104px">We do offer the Mobile-->
                         Application
                         development services for the platform
                         like android, iOs .We analyze, design and develop cross-platform applications for our customers
@@ -156,9 +174,9 @@
 
             <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6">
                 <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/data-management.svg">
-                <div class="flex flex-col justify-between border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
+                <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">ECM Professional Services</label>
-                    <label class="block text-sm overflow-hidden sm:max-h-10 min-h-1rem mt-7">
+                    <label class="block text-sm overflow-hidden min-h-1rem leading-5 max-h-5">
                         NLessTech is having the dedicated ECM professional team with a depth of skill set, including
                         development and integration, support, training, and strategic consultant who assist in aligning
                         the solution to your business objectives and needs. We are dealing with the industry-leading
@@ -169,9 +187,10 @@
 
             <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6">
                 <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/digital.svg">
-                <div class="flex flex-col justify-between border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
+                <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">Business Intelligence</label>
-                    <label class="block text-sm overflow-hidden max-h-10 mt-7">We are offering services to develop the
+                    <label class="block text-sm overflow-hidden leading-5 max-h-5">We are offering services to develop
+                        the
                         Business Intelligence Solution based
                         on intelligent platforms to take useful meaning out of data for our customers in various
                         industries.
@@ -182,9 +201,9 @@
 
             <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6">
                 <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/code-svgrepo-com.svg">
-                <div class="flex flex-col justify-between border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
+                <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">Low-Code/No-Code Platform</label>
-                    <label class="block text-sm overflow-hidden max-h-10 mt-7">Low-code and no-code platforms enable
+                    <label class="block text-sm overflow-hidden leading-5 max-h-5">Low-code and no-code platforms enable
                         people to build applications with
                         little to no need for any coding knowledge. Our teams are fully proficient to deliver the such
                         kind of platform and products and help you meet your objectives.
@@ -194,9 +213,10 @@
 
             <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6">
                 <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/finger-print.svg">
-                <div class="flex flex-col justify-between border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
+                <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">Capturing Solutions</label>
-                    <label class="block text-sm overflow-hidden max-h-10 mt-7">We are dealing with the industry leader
+                    <label class="block text-sm overflow-hidden leading-5 max-h-5">We are dealing with the industry
+                        leader
                         product in the field of scanning and capturing solutions.
                         Our experts are confident to deliver the solution for your structured, unstructured and semi
                         structure document by capturing
@@ -207,9 +227,10 @@
 
             <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6">
                 <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/software-engineering.svg">
-                <div class="flex flex-col justify-between border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
+                <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">Website Development</label>
-                    <label class="block text-sm overflow-hidden max-h-10 mt-7">Web development services help create all
+                    <label class="block text-sm overflow-hidden leading-5 min-h-5 max-h-5">Web development services help
+                        create all
                         types of web-based software and
                         ensure great experience for web users. We professionally analyze, design & develop the
                         state-of-the-art
@@ -221,9 +242,9 @@
 
             <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6">
                 <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/mechanical-arm.svg">
-                <div class="flex flex-col justify-between border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
+                <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">Objectif Lune Planetpress </label>
-                    <label class="block text-sm overflow-hidden max-h-10 mt-7">With a strong and solid experience in
+                    <label class="block text-sm overflow-hidden leading-5 max-h-5">With a strong and solid experience in
                         Objectiflune’s e-form solutions,
                         NlessTech is very well positioned to understand and respond to your evolving variable data
                         output
@@ -233,11 +254,12 @@
                 </div>
             </div>
 
-            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6">
+            <div name="service"
+                 class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 col-span-1 md:col-span-2 lg:col-span-3">
                 <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/counseling.svg">
-                <div class="flex flex-col justify-between border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
+                <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">Professional Consultancy</label>
-                    <label class="block text-sm overflow-hidden max-h-10 mt-7">Our consultant team is well versed in
+                    <label class="block text-sm overflow-hidden leading-5 max-h-5">Our consultant team is well versed in
                         order to provide you the best consultancy
                         services to attain the highest level of your organization objective. We are currently helping
                         organization
@@ -251,7 +273,7 @@
     </section>
 
 
-    <section name="products" id="products" class="min-h-full">
+    <section name="products" id="products" class="min-h-full p-5">
         <div class="slideshow-container w-full sm:w-3/4 xl:max-w-1/2 px-4 min-h-full">
 
             <!--            Objectif Lune-->
@@ -259,7 +281,7 @@
                 <div class="w-full px-4">
                     <div class="bg-white border-solid border-2 rounded-md shadow-md h-full">
                         <div class="mb-10 text-black h-full">
-                            <div class="flex flex-col justify-between items-center px-14 py-4 pb-16 h-full relative">
+                            <div class="flex flex-col justify-between items-center px-7 sm:px-14 py-4 pb-16 h-full relative">
                                 <div class="max-h-20 min-h-20 flex justify-center">
                                     <img src="Assets/Icons/objectifLuneLogo.svg" class="mb-3 h-full w-3/4 sm:w-1/2">
                                 </div>
@@ -305,7 +327,7 @@
                 <div class="w-full px-4">
                     <div class="bg-white border-solid border-2 rounded-md shadow-md h-full">
                         <div class="mb-10 text-black h-full">
-                            <div class="flex flex-col justify-between items-center px-14 py-4 pb-16 h-full relative">
+                            <div class="flex flex-col justify-between items-center px-7 sm:px-14 py-4 pb-16 h-full relative">
                                 <div class="max-h-20 min-h-20 flex justify-center">
                                     <img src="Assets/Icons/serGroupLogo.svg" class="mb-3 h-full">
                                 </div>
@@ -345,7 +367,7 @@
                 <div class="w-full px-4">
                     <div class="bg-white border-solid border-2 rounded-md shadow-md h-full">
                         <div class="mb-10 text-black h-full">
-                            <div class="flex flex-col justify-between items-center px-14 py-4 pb-16 h-full relative">
+                            <div class="flex flex-col justify-between items-center px-7 sm:px-14 py-4 pb-16 h-full relative">
                                 <div class="max-h-20 min-h-20 flex justify-center">
                                     <img src="Assets/Icons/mFilesLogo.svg" class="mb-3 h-full">
                                 </div>
@@ -386,8 +408,10 @@
             <!-- Next and previous buttons -->
 
             <div class="inline-flex justify-between w-full">
-                <a class="prevProd bg-gray-300 h-36 flex items-center sm:h-14" onclick="plusProductSlide(-1)">❮</a>
-                <a class="nextProd bg-gray-300 h-36 flex items-center sm:h-14   " onclick="plusProductSlide(1)">❯</a>
+                <a class="prevProd bg-gray-300 h-96 sm:h-36 flex items-center sm:h-14"
+                   onclick="plusProductSlide(-1)" style="left: -9px">❮</a>
+                <a class="nextProd bg-gray-300 h-96 sm:h-36 flex items-center sm:h-14" onclick="plusProductSlide(1)"
+                   style="right: -9px">❯</a>
             </div>
 
             <br>
@@ -395,7 +419,42 @@
         </div>
     </section>
 
-
+    <footer class="bottom-0">
+        <div class="flex flex-col md:flex-row p-12 h-auto space-y-10">
+            <div class="md:w-1/2 text-xs text-justify" id="aboutUs">
+                <h1 class="font-semibold text-sm">About Us</h1>
+                <p>For a decade NLessTech has been helping businesses to communicate more efficiently and
+                    cost-effectively
+                    through the use of the globally renown e-form variable data printing solution PlanetPress Suite and
+                    OL
+                    Connect, developed by Objectiflune and distributed in the Middle East and North Africa by NLessTech.
+                    With a twin focus on customer satisfaction and technological innovation, the company has become the
+                    trusted, credible expert in printing, messaging, distribution and other management and financial
+                    services related to paper communications. NLessTech has a single strategy of delivering value to
+                    customers. A single trusted solution with a unified approach to the market, which is the engine of
+                    the
+                    company’s
+                    operations. Everything you deliver to a customer – whether on paper or electronically– is an
+                    opportunity
+                    to expand
+                    your relationship. By linking the physical and digital worlds, NLessTech helps make communication
+                    between you and your customers flow better.
+                </p>
+            </div>
+            <div class="flex flex-col justify-center items-center gap-y-2 md:w-1/2">
+                <div class="flex gap-x-3">
+                    <span class="font-bold text-xl">LOGO</span>
+                    <span class="font-light text-xl">NLESSTECH</span>
+                </div>
+                <label>support@nlesstech.com</label>
+                <div class="flex w-1/4 justify-around">
+                    <img src="Assets/Icons/youtube-svgrepo-com.svg" width="25">
+                    <img src="Assets/Icons/twitterIcon.svg">
+                    <img src="Assets/Icons/linkedinIcon.svg">
+                </div>
+            </div>
+        </div>
+    </footer>
 </main>
 <!--Social Icons-->
 <section id="socialIcons" class="hidden sm:block">
@@ -420,38 +479,6 @@
 </section>
 
 
-<footer class="bottom-0">
-    <div class="flex flex-col md:flex-row p-12 h-auto space-y-10">
-        <div class="md:w-1/2 text-xs text-justify" id="aboutUs">
-            <h1 class="font-semibold text-sm">About Us</h1>
-            <p>For a decade NLessTech has been helping businesses to communicate more efficiently and cost-effectively
-                through the use of the globally renown e-form variable data printing solution PlanetPress Suite and OL
-                Connect, developed by Objectiflune and distributed in the Middle East and North Africa by NLessTech.
-                With a twin focus on customer satisfaction and technological innovation, the company has become the
-                trusted, credible expert in printing, messaging, distribution and other management and financial
-                services related to paper communications. NLessTech has a single strategy of delivering value to
-                customers. A single trusted solution with a unified approach to the market, which is the engine of the
-                company’s
-                operations. Everything you deliver to a customer – whether on paper or electronically– is an opportunity
-                to expand
-                your relationship. By linking the physical and digital worlds, NLessTech helps make communication
-                between you and your customers flow better.
-            </p>
-        </div>
-        <div class="flex flex-col justify-center items-center gap-y-2 md:w-1/2">
-            <div class="flex gap-x-3">
-                <span class="font-bold text-xl">LOGO</span>
-                <span class="font-light text-xl">NLESSTECH</span>
-            </div>
-            <label>support@nlesstech.com</label>
-            <div class="flex w-1/4 justify-around">
-                <img src="Assets/Icons/youtube-svgrepo-com.svg" width="25">
-                <img src="Assets/Icons/twitterIcon.svg">
-                <img src="Assets/Icons/linkedinIcon.svg">
-            </div>
-        </div>
-    </div>
-</footer>
 </body>
 </html>
 <script>
@@ -506,7 +533,7 @@
             slideIndex = 1
         }
         slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlidesAutomatically, 2000); // Change image every 2 seconds
+        setTimeout(showSlidesAutomatically, 4000); // Change image every 4 seconds
     }
 
     // });
@@ -515,43 +542,106 @@
 
         if ($(window).width() <= 500) {
             // do your stuff
-            if ($(this).hasClass("collapsed")) {
-                $(':not(:first-child)', this).removeClass("max-h-10")
-                $(this).animate({
+            if (!$(this).hasClass("expanded")) {
+                $(':not(:first-child)', this).removeClass("max-h-5")
+                // $(this).animate({
+                $(':not(:first-child)', this).animate({
                     maxHeight: "25rem"
                 }, 1000)
-                $(this).removeClass("collapsed")
+                // $(this).removeClass("collapsed")
+                $(this).addClass("expanded")
             } else {
-                $(this).animate({
-                    maxHeight: "11rem"
+                let headingHeight = $(':first-child', this).outerHeight()
+                //max-h-5 = 1.25rem
+                let descriptionHeight = 1.25
+                //converting px to rem
+                headingHeight = headingHeight * 0.063
+                newBoxHeight = headingHeight + descriptionHeight + 5
+
+                // $(this).animate({
+                $(':not(:first-child)', this).animate({
+                    // maxHeight: Math.trunc(newBoxHeight) + "rem"
+                    maxHeight: "1.25rem"
                 }, 1000)
+
 
                 setTimeout(() => {
                     $(this).addClass("collapsed")
-                    $(':not(:first-child)', this).addClass("max-h-10")
+                    $(':not(:first-child)', this).addClass("max-h-5")
                 }, 1000);
                 // $(this).addClass("sm:h-44")
             }
         } else {
-            if ($(this).hasClass("collapsed")) {
-                $(':not(:first-child)', this).removeClass("max-h-10")
-                $(this).animate({
+            console.log("large")
+
+            if (!$(this).hasClass("expanded")) {
+                $(':not(:first-child)', this).removeClass("max-h-5")
+                // $(this).animate({
+                $(':not(:first-child)', this).animate({
                     maxHeight: "20rem"
                 }, 1000)
-                $(this).removeClass("collapsed")
+                // $(this).removeClass("collapsed")
+                $(this).addClass("expanded")
             } else {
-                $(this).animate({
-                    maxHeight: "11rem"
+                // $(this).animate({
+                $(':not(:first-child)', this).animate({
+                    // maxHeight: "11rem"
+                    maxHeight: "1.25rem"
                 }, 1000)
 
                 setTimeout(() => {
-                    $(this).addClass("collapsed")
-                    $(':not(:first-child)', this).addClass("max-h-10")
+                    // $(this).addClass("collapsed")
+                    $(this).removeClass("expanded")
+                    $(':not(:first-child)', this).addClass("max-h-5")
                 }, 1000);
                 // $(this).addClass("sm:h-44")
             }
         }
     })
+
+    // $('div[name="service"] > div').click(function () {
+    //     // $(this).toggleClass("sm:h-44")
+    //
+    //     if ($(window).width() <= 500) {
+    //         // do your stuff
+    //         if ($(this).hasClass("collapsed")) {
+    //             $(':not(:first-child)', this).removeClass("max-h-10")
+    //             $(this).animate({
+    //                 maxHeight: "25rem"
+    //             }, 1000)
+    //             $(this).removeClass("collapsed")
+    //         } else {
+    //             $(this).animate({
+    //                 maxHeight: "11rem"
+    //             }, 1000)
+    //
+    //             setTimeout(() => {
+    //                 $(this).addClass("collapsed")
+    //                 $(':not(:first-child)', this).addClass("max-h-10")
+    //             }, 1000);
+    //             // $(this).addClass("sm:h-44")
+    //         }
+    //     } else {
+    //         if ($(this).hasClass("collapsed")) {
+    //             $(':not(:first-child)', this).removeClass("max-h-10")
+    //             $(this).animate({
+    //                 maxHeight: "20rem"
+    //             }, 1000)
+    //             $(this).removeClass("collapsed")
+    //         } else {
+    //             $(this).animate({
+    //                 maxHeight: "11rem"
+    //             }, 1000)
+    //
+    //             setTimeout(() => {
+    //                 $(this).addClass("collapsed")
+    //                 $(':not(:first-child)', this).addClass("max-h-10")
+    //             }, 1000);
+    //             // $(this).addClass("sm:h-44")
+    //         }
+    //     }
+    // })
+
 
 </script>
 <script>

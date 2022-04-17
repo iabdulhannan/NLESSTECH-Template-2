@@ -7,6 +7,9 @@
     font-family: Poppins-Bold;
     src: url("../Fonts/Poppins/Poppins-Bold.ttf");
 }
+html {
+    scroll-padding-top: 3.5rem; /* height of sticky header */
+}
 
 body, html {
     height: 100%;
@@ -209,8 +212,8 @@ section[name="services"] > div div {
 }
 
 .collapsed {
-    max-height: 11rem;
-    height: 11rem;
+    /*max-height: 11rem;*/
+    min-height: 11rem;
     /*overflow: hidden;*/
     /*transition: all .2s ease;*/
 }
@@ -426,7 +429,7 @@ section[name='products'] a {
 @media (max-width: 1024px) {
 
     .myProducts > div > div {
-        height: 33rem;
+        height: 37rem;
     }
 
 }
@@ -437,15 +440,21 @@ section[name='products'] a {
     }
 }
 
+/*@media (max-width: 600px) {*/
+/*    .myProducts > div > div {*/
+/*        height: 75rem;*/
+/*    }*/
+/*}*/
+
 @media (max-width: 600px) {
     .myProducts > div > div {
-        height: 55rem;
+        height: 70rem;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 380px) {
     .myProducts > div > div {
-        height: 70rem;
+        height: 80rem;
     }
 }
 
@@ -492,3 +501,4 @@ section[name='products'] a {
 footer {
     background-color: #f8f9fa;
 }
+

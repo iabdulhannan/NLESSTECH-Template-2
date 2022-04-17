@@ -14,17 +14,30 @@
 .min-h-1rem{
     min-height: 1.5rem;
 }
+
+.min-h-min-content{
+    min-height: min-content;
+}
+
+.min-h-max-content{
+    min-height: max-content;
+}
+
+.min-h-5{
+    min-height: 1.25rem;
+}
+
 @media (min-width: 1280px) {
     .xl\:max-w-1\/2 {
         max-width: 50%;
     }
-    .max-h-20{
+    .xl\:max-h-20{
         max-height: 5rem;
     }
-    .min-h-20{
+    .xl\:min-h-20{
         min-height: 5rem;
     }
-    .min-h-1rem{
+    .xl\:min-h-1rem{
         min-height: 1.5rem;
     }
 
@@ -35,13 +48,13 @@
     .lg\:max-w-1\/2 {
         max-width: 50%;
     }
-    .max-h-20{
+    .lg\:max-h-20{
         max-height: 5rem;
     }
-    .min-h-20{
+    .lg\:min-h-20{
         min-height: 5rem;
     }
-    .min-h-1rem{
+    .lg\:min-h-1rem{
         min-height: 1.5rem;
     }
 
@@ -52,13 +65,13 @@
     .md\:max-w-1\/2 {
         max-width: 50%;
     }
-    .max-h-20{
+    .md\:max-h-20{
         max-height: 5rem;
     }
-    .min-h-20{
+    .md\:min-h-20{
         min-height: 5rem;
     }
-    .min-h-1rem{
+    .md\:min-h-1rem{
         min-height: 1.5rem;
     }
 
@@ -69,13 +82,29 @@
     .sm\:max-w-1\/2 {
         max-width: 50%;
     }
-    .max-h-20{
+    .sm\:max-h-20{
         max-height: 5rem;
     }
-    .min-h-20{
+    .sm\:min-h-20{
         min-height: 5rem;
     }
-    .min-h-1rem{
+    .sm\:min-h-1rem{
+        min-height: 1.5rem;
+    }
+
+}
+@media (min-width: 300px) {
+
+    .xxs\:max-w-1\/2 {
+        max-width: 50%;
+    }
+    .xxs\:max-h-20{
+        max-height: 5rem;
+    }
+    .xxs\:min-h-20{
+        min-height: 5rem;
+    }
+    .xxs\:min-h-1rem{
         min-height: 1.5rem;
     }
 

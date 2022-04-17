@@ -47,6 +47,7 @@ window.onload = function () {
 
         $('#emergerMenu a').click(function () {
             $('#emergerMenu').removeClass("fixed").addClass("absolute")
+            $('#nav-icon3').toggleClass('open');
             $('#emergerMenu').animate({
                 right: "100%"
             }, 1000).removeClass("menuExpanded")
