@@ -422,41 +422,36 @@ section[name='products'] a {
 }
 
 .myProducts > div > div {
-    height: 30rem;
+    /*height: 30rem;*/
+    height: 10rem;
 }
 
 
-@media (max-width: 1024px) {
+/*@media (max-width: 1024px) {*/
 
-    .myProducts > div > div {
-        height: 37rem;
-    }
-
-}
-
-@media (max-width: 800px) {
-    .myProducts > div > div {
-        height: 50rem;
-    }
-}
-
-/*@media (max-width: 600px) {*/
 /*    .myProducts > div > div {*/
-/*        height: 75rem;*/
+/*        height: 37rem;*/
+/*    }*/
+
+/*}*/
+
+/*@media (max-width: 800px) {*/
+/*    .myProducts > div > div {*/
+/*        height: 50rem;*/
 /*    }*/
 /*}*/
 
-@media (max-width: 600px) {
-    .myProducts > div > div {
-        height: 70rem;
-    }
-}
+/*@media (max-width: 600px) {*/
+/*    .myProducts > div > div {*/
+/*        height: 70rem;*/
+/*    }*/
+/*}*/
 
-@media (max-width: 380px) {
-    .myProducts > div > div {
-        height: 80rem;
-    }
-}
+/*@media (max-width: 380px) {*/
+/*    .myProducts > div > div {*/
+/*        height: 80rem;*/
+/*    }*/
+/*}*/
 
 /*Social Icons*/
 .social-btn {
