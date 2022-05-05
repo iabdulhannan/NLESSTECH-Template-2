@@ -9,6 +9,12 @@
     <link href="../Assets/Stylesheets/Tailwind.css" rel="stylesheet">
 </head>
 <style>
+    :root{
+        --seaGreen:rgba(49, 150, 156, 1);
+        --nLessRed:#DC2626; /*text-red-600*/
+        --nLessGray:rgb(156,163,175);
+        --nLessDarkGray:rgb(107,114,128);
+    }
 
 
     .icon {
@@ -16,7 +22,8 @@
         height: 60px;
         border-radius: 50%;
         /*background: #46b5d1;*/
-        background: #31969c;
+        /*background: #31969c;*/
+        background: rgb(107,114,128);
         margin: 0 auto;
         margin-bottom: 20px;
     }
@@ -27,7 +34,8 @@
 
 	p a {
 		/*color: #46b5d1;*/
-		color: #31969c;
+		/*color: #31969c;*/
+		color: #DC2626;
 	}
 	.contact-wrap {
 		background: #fff;
@@ -127,7 +135,7 @@
                                     <span class="fa fa-map-marker"></span>
                                 </div>
                                 <div class="text">
-                                    <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                                    <p class="text-red-600"><span class="text-black">Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
                                 </div>
                             </div>
                         </div>
@@ -211,7 +219,7 @@
 
                                         <div class="w-full px-4 py-2">
                                             <div class="">
-                                                <input type="submit" value="Send Message" class="p-2 text-white rounded" style="background-color: #31969c">
+                                                <input type="submit" value="Send Message" class="p-2 text-white rounded cursor-pointer" style="background-color: rgb(156,163,175)">
                                             </div>
                                         </div>
 
@@ -221,7 +229,7 @@
                         </div>
                         <div class="w-full md:w-2/5 flex items-center justify-center">
 <!--								<img src="Assets/Images/img.jpg" class="w-full">-->
-								<label class="font-semibold text-4xl">LOGO</label>
+                            <label class="font-semibold text-4xl"><span class="text-red-600">LOGO</span> NLESSTECH</label>
                             </div>
                         </div>
                     </div>

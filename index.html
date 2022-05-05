@@ -13,21 +13,24 @@
 </head>
 <body>
 <header class="hidden md:block h-14">
-    <nav class="wrapper flex items-center gap-x-6 px-5 py-2 fixed w-full z-10 h-14">
-        <div class="">
-            <span class="font-bold text-white">LOGO</span>
-            <span class="font-semibold text-white">NLESSTECH</span>
+    <nav class="wrapper flex items-center justify-between px-5 py-2 fixed w-full z-10 h-14">
+        <div class="flex items-center gap-x-6">
+            <div class="">
+                <span class="font-bold text-red-600">LOGO</span>
+                <span class="font-semibold">NLESSTECH</span>
+            </div>
+            <div class="tabs">
+                <div class="selector"></div>
+                <a slideTo="home" href="#" class="active" onclick="window.location = '#home'">Home</a>
+                <a slideTo="services" href="#services" onclick="window.location = '#services'">Services</a>
+                <a slideTo="products" href="#products" onclick="window.location = '#products'">Products</a>
+                <a slideTo="aboutUs" href="#" onclick="window.location = '#aboutUs'">About Us</a>
+            </div>
         </div>
-        <div class="tabs">
-            <div class="selector"></div>
-            <a slideTo="home" href="#" class="active" onclick="window.location = '#home'">Home</a>
-            <a slideTo="services" href="#services" onclick="window.location = '#services'">Services</a>
-            <a slideTo="products" href="#products" onclick="window.location = '#products'">Products</a>
-            <a slideTo="aboutUs" href="#" onclick="window.location = '#aboutUs'">About Us</a>
-        </div>
-        <div>
-            <button class="border border-white rounded-md text-white py-1 px-3 hover:underline"
-                    onclick="window.location = 'Pages/contactForm.html' ">Demo
+        <div class="text-xl">
+<!--            <button class="border border-black rounded-md py-1 px-3 hover:underline bg-gray-300 hover:bg-white hover:text-red-600 hover:border-none hover:border-white"-->
+            <button class="py-1 px-3 transform transition duration-500 hover:scale-110"
+                    onclick="window.location = 'Pages/contactForm.html' "><span class="text-red-600">Try</span> a Product
             </button>
         </div>
     </nav>
@@ -42,26 +45,26 @@
                 <span></span>
             </div>
             <div class="">
-                <span class="font-bold text-white text-3xl">$</span>
-                <span class="font-semibold text-white text-3xl">&nbsp;NLESSTECH</span>
+                <span class="font-bold text-3xl text-red-600">$</span>
+                <span class="font-semibold text-black text-3xl">&nbsp;NLESSTECH</span>
             </div>
         </nav>
         <div id="emergerMenu"
              class="absolute top-0 w-full bg-gray-200 h-screen pt-14 text-2xl text-center overflow-hidden z-10"
              style="right: 100%">
-            <div class="p-5" style="border-bottom-color: #31969c; border-width: 1px">
+            <div class="p-5" style="border-bottom-color: black; border-width: 1px">
                 <a onclick="window.location = '#home'">Home</a>
             </div>
-            <div class="p-5" style="border-bottom-color: #31969c; border-width: 1px">
+            <div class="p-5" style="border-bottom-color: black; border-width: 1px">
                 <a onclick="window.location = '#services'">Services</a>
             </div>
-            <div class="p-5" style="border-bottom-color: #31969c; border-width: 1px">
+            <div class="p-5" style="border-bottom-color: black; border-width: 1px">
                 <a onclick="window.location = '#products'">Products</a>
             </div>
-            <div class="p-5" style="border-bottom-color: #31969c; border-width: 1px">
+            <div class="p-5" style="border-bottom-color: black; border-width: 1px">
                 <a onclick="window.location = '#aboutUs'">About Us</a>
             </div>
-            <div class="p-5" style="border-bottom-color: #31969c; border-width: 1px">
+            <div class="p-5" style="border-bottom-color: black; border-width: 1px">
                 <a href="Pages/contactForm.html">Demo</a>
             </div>
             <div class="flex flex-col justify-center items-center w-full absolute bottom-2">
@@ -150,21 +153,20 @@
 
     <!--    Services-->
     <section name="services" id="services">
-        <h1 class="text-center text-4xl font-bold pt-12 pb-5">What do we do?</h1>
+        <h1 class="text-center text-4xl font-bold pt-12 pb-5">What do we do<span class="text-red-600 text-5xl">?</span></h1>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row place-items-center w-full p-10">
 
             <div class="flex justify-center text-center text-xl items-center w-full p-5">
-                <label>Here is what<br> we do with <br><span class="font-bold" style="color: rgba(49,150,156,1)">Excellence</span></label>
+                <label>Here is what<br> we do with <br><span class="font-bold text-red-600">Excellence</span></label>
             </div>
 
-            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6">
-                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/cross-platform.svg">
+            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
+                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/cross-platform%20BR.svg">
                 <div class="flex flex-col gap-y-2 justify-between border-4 px-7 pt-10 rounded-3xl pb-8 overflow-hidden collapsed">
                     <label class="block text-xl">Cross Platform Mobile Application Development</label>
                     <label class="block text-sm overflow-hidden min-h-1rem leading-5 max-h-5 text-justify">We do offer
                         the Mobile
-                        <!--                    <label class="block text-sm overflow-hidden min-h-1rem mt-1 leading-5" style="height: 104px">We do offer the Mobile-->
                         Application
                         development services for the platform
                         like android, iOs .We analyze, design and develop cross-platform applications for our customers
@@ -176,8 +178,8 @@
                 </div>
             </div>
 
-            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6">
-                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/data-management.svg">
+            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
+                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/data-management%20BR.svg">
                 <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">ECM Professional Services</label>
                     <label class="block text-sm overflow-hidden min-h-1rem leading-5 max-h-5 text-justify">
@@ -189,8 +191,8 @@
                 </div>
             </div>
 
-            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6">
-                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/digital.svg">
+            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
+                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/digital%20BR.svg">
                 <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">Business Intelligence</label>
                     <label class="block text-sm overflow-hidden leading-5 max-h-5 text-justify">We are offering services
@@ -204,8 +206,8 @@
                 </div>
             </div>
 
-            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6">
-                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/code-svgrepo-com.svg">
+            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
+                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/code-svgrepo-com%20BRsvg.svg">
                 <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">Low-Code/No-Code Platform</label>
                     <label class="block text-sm overflow-hidden leading-5 max-h-5 text-justify">Low-code and no-code
@@ -217,8 +219,8 @@
                 </div>
             </div>
 
-            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6">
-                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/finger-print.svg">
+            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
+                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/finger-print%20BR.svg">
                 <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">Capturing Solutions</label>
                     <label class="block text-sm overflow-hidden leading-5 max-h-5 text-justify">We are dealing with the
@@ -230,8 +232,8 @@
                 </div>
             </div>
 
-            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6">
-                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/software-engineering.svg">
+            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
+                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/software-engineering%20BR.svg">
                 <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">Website Development</label>
                     <label class="block text-sm overflow-hidden leading-5 min-h-5 max-h-5 text-justify">We
@@ -242,8 +244,8 @@
                 </div>
             </div>
 
-            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6">
-                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/mechanical-arm.svg">
+            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
+                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/mechanical-arm%20BR.svg">
                 <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">Business Process Automation</label>
                     <label class="block text-sm overflow-hidden leading-5 max-h-5 text-justify">With a strong and solid
@@ -254,8 +256,8 @@
             </div>
 
             <div name="service"
-                 class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 md:col-span-2 lg:col-span-1">
-                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/counseling.svg">
+                 class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 md:col-span-2 lg:col-span-1 zoom">
+                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/counseling%20BR.svg">
                 <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">Professional Consultancy</label>
                     <label class="block text-sm overflow-hidden leading-5 max-h-5 text-justify">Our consultant team is
@@ -429,11 +431,11 @@
         </div>
     </section>
 
-    <footer class="bottom-0">
+    <footer class="bottom-0 bg-gray-700 text-white">
         <div class="flex flex-col md:flex-row p-12 h-auto space-y-10">
             <div class="md:w-1/2 text-xs text-justify" id="aboutUs">
-                <h1 class="font-semibold text-sm">About Us</h1>
-                <p>
+                <h1 class="font-semibold text-lg">About Us</h1>
+                <p class="leading-5">
                     For a decade NLessTech has been helping businesses to communicate more efficiently and
                     cost-effectively through the use of the globally renown bsuiness automation solutions. With a twin
                     focus on customer satisfaction and technological innovation, the company has become the trusted,
@@ -448,19 +450,19 @@
             </div>
             <div class="flex flex-col justify-center items-center gap-y-2 md:w-1/2">
                 <div class="flex gap-x-3">
-                    <span class="font-bold text-xl">LOGO</span>
+                    <span class="font-bold text-xl text-red-600">LOGO</span>
                     <span class="font-light text-xl">NLESSTECH</span>
                 </div>
                 <label>support@nlesstech.com</label>
-                <div class="flex w-1/3 justify-around my-5">
-                    <a class="w-1/3 p-1 flex justify-center">
-                        <img src="Assets/Icons/youtube-svgrepo-com.svg" class="w-1/2">
+                <div class="flex w-2/6 md:w-1/3 justify-around my-5">
+                    <a class="w-1/3 p-1 flex justify-center cursor-pointer">
+                        <img src="Assets/Icons/youtubeIconWhite.svg" class="w-1/2">
                     </a>
-                    <a class="w-1/3 p-1 flex justify-center">
-                        <img src="Assets/Icons/twitterIcon.svg" class="w-1/2">
+                    <a class="w-1/3 p-1 flex justify-center cursor-pointer">
+                        <img src="Assets/Icons/twitterIconWhite.svg" class="w-1/2">
                     </a>
-                    <a class="w-1/3 p-1 flex justify-center">
-                        <img src="Assets/Icons/linkedinIcon.svg" class="w-1/2">
+                    <a class="w-1/3 p-1 flex justify-center cursor-pointer">
+                        <img src="Assets/Icons/linkedinIconWhite.svg" class="w-1/2">
                     </a>
                 </div>
             </div>
@@ -609,50 +611,6 @@
             }
         }
     })
-
-    // $('div[name="service"] > div').click(function () {
-    //     // $(this).toggleClass("sm:h-44")
-    //
-    //     if ($(window).width() <= 500) {
-    //         // do your stuff
-    //         if ($(this).hasClass("collapsed")) {
-    //             $(':not(:first-child)', this).removeClass("max-h-10")
-    //             $(this).animate({
-    //                 maxHeight: "25rem"
-    //             }, 1000)
-    //             $(this).removeClass("collapsed")
-    //         } else {
-    //             $(this).animate({
-    //                 maxHeight: "11rem"
-    //             }, 1000)
-    //
-    //             setTimeout(() => {
-    //                 $(this).addClass("collapsed")
-    //                 $(':not(:first-child)', this).addClass("max-h-10")
-    //             }, 1000);
-    //             // $(this).addClass("sm:h-44")
-    //         }
-    //     } else {
-    //         if ($(this).hasClass("collapsed")) {
-    //             $(':not(:first-child)', this).removeClass("max-h-10")
-    //             $(this).animate({
-    //                 maxHeight: "20rem"
-    //             }, 1000)
-    //             $(this).removeClass("collapsed")
-    //         } else {
-    //             $(this).animate({
-    //                 maxHeight: "11rem"
-    //             }, 1000)
-    //
-    //             setTimeout(() => {
-    //                 $(this).addClass("collapsed")
-    //                 $(':not(:first-child)', this).addClass("max-h-10")
-    //             }, 1000);
-    //             // $(this).addClass("sm:h-44")
-    //         }
-    //     }
-    // })
-
 
 </script>
 <script>

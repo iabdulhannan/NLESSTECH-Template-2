@@ -1,3 +1,10 @@
+:root{
+    --seaGreen:rgba(49, 150, 156, 1);
+    --nLessRed:#DC2626; /*text-red-600*/
+    --nLessGray:rgb(156,163,175);
+    --nLessDarkGray:rgb(107,114,128);
+}
+
 @font-face {
     font-family: Poppins-Regular;
     src: url("../Fonts/Poppins/Poppins-Regular.ttf");
@@ -23,7 +30,8 @@ body, html {
 
 .wrapper {
     /*background-color: #0078d4;*/
-    background: linear-gradient(11deg, rgba(49, 150, 156, 1) 54%, rgba(255, 255, 255, 1) 100%);
+    /*background: linear-gradient(11deg, rgba(49, 150, 156, 1) 54%, rgba(255, 255, 255, 1) 100%);*/
+    background: white;
 }
 
 .tabs {
@@ -37,7 +45,7 @@ body, html {
 
 .tabs a {
     text-decoration: none;
-    color: #fff;
+    /*color: #fff;*/
     padding: 10px 20px;
     /*display: inline-block;*/
     position: relative;
@@ -71,7 +79,8 @@ body, html {
     top: 0px;
     z-index: 1;
     transition-duration: 0.6s;
-    border-bottom: #ffffff 2px solid;
+    /*border-bottom: #ffffff 2px solid;*/
+    border-bottom: var(--nLessRed) 2px solid;
 }
 
 /*HamBurger*/
@@ -97,7 +106,8 @@ body, html {
     position: absolute;
     height: 3px;
     width: 100%;
-    background: #ffffff;
+    /*background: #ffffff;*/
+    background: #000000;
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -179,9 +189,9 @@ body::-webkit-scrollbar-thumb {
 /*    backdrop-filter: blur(15px);*/
 /*}*/
 
-section[name="services"] > div div:hover {
-    transform: scale(1.01);
-}
+/*section[name="services"] > div div:hover {*/
+/*    transform: scale(1.01);*/
+/*}*/
 
 section[name="services"] > div div:hover img {
     z-index: 1;
@@ -205,7 +215,9 @@ section[name="services"] > div img {
 
 
 section[name="services"] > div div {
-    border-color: rgba(49, 150, 156, 1);
+    /*border-color: rgba(49, 150, 156, 1);*/
+    border-color: black;
+    /*border-color: rgb(156,163,175);*/
     /*border-image: linear-gradient(11deg, rgba(49,150,156,1) 54%, rgba(255,255,255,1) 100%);*/
     /*border-image-source: linear-gradient(to left, rgba(49,150,156,1), rgba(255,255,255,1));*/
     /*border-image-slice: 1;*/
@@ -332,7 +344,7 @@ section[name='products'] .myProducts {
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -417,8 +429,14 @@ section[name='products'].stick {
     background-color: #4A90E2;
 }
 
-section[name='products'] a {
-    color: #31969c;
+section[name='products'] a:not(.bg-gray-300) {
+    /*color: #31969c;*/
+    /*color: black;*/
+    color: var(--nLessGray);
+}
+section[name='products'] a svg {
+    color: black;
+    /*color: var(--nLessGray);*/
 }
 
 .myProducts > div > div {
