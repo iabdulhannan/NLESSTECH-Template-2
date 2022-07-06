@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>NLESSTECH</title>
+    <title>ENDLESSTECH</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -16,8 +16,6 @@
     <nav class="wrapper flex items-center justify-between px-5 py-2 fixed w-full z-10 h-14">
         <div class="flex items-center gap-x-6">
             <div class="">
-<!--                <span class="font-bold text-red-600">LOGO</span>-->
-<!--                <span class="font-semibold">NLESSTECH</span>-->
                 <img src="Assets/Images/logo.svg" width="200">
             </div>
             <div class="tabs">
@@ -29,9 +27,9 @@
             </div>
         </div>
         <div class="text-xl">
-<!--            <button class="border border-black rounded-md py-1 px-3 hover:underline bg-gray-300 hover:bg-white hover:text-red-600 hover:border-none hover:border-white"-->
+            <!--            <button class="border border-black rounded-md py-1 px-3 hover:underline bg-gray-300 hover:bg-white hover:text-red-600 hover:border-none hover:border-white"-->
             <button class="py-1 px-3 transform transition duration-500 hover:scale-110"
-                    onclick="window.location = 'Pages/contactForm.html' "><span class="text-red-600">Try</span> a Product
+                    onclick="window.location = 'Pages/contactForm.php' "><span class="text-red-600">Try</span> a Product
             </button>
         </div>
     </nav>
@@ -46,8 +44,6 @@
                 <span></span>
             </div>
             <div class="">
-<!--                <span class="font-bold text-3xl text-red-600">$</span>-->
-<!--                <span class="font-semibold text-black text-3xl">&nbsp;NLESSTECH</span>-->
                 <img src="Assets/Images/logo.svg" width="200">
             </div>
         </nav>
@@ -67,7 +63,7 @@
                 <a onclick="window.location = '#aboutUs'">About Us</a>
             </div>
             <div class="p-5" style="border-bottom-color: black; border-width: 1px">
-                <a href="Pages/contactForm.html">Demo</a>
+                <a href="Pages/contactForm.php">Demo</a>
             </div>
             <div class="flex flex-col justify-center items-center w-full absolute bottom-2">
                 <label class="p-2 text-xl">Contact Us</label>
@@ -89,22 +85,8 @@
 </header>
 
 
-<!--<main class="pt-14 sm:pt-12 lg:pt-20">-->
 <main class="h-full">
-    <!--<main>-->
-    <!--    Presenter Page-->
-    <!--<section class="h-1/2 lg:min-h-screen flex flex-col justify-center items-center">
-        <div class="h-full w-full lg:min-h-screen flex flex-col gap-y-5 items-center justify-center">
-            <label class="text-white text-center font-bold font-bold text-6xl">
-                There is something<br>that we do
-            </label>
-            <label class="text-white">Business Process and Data-Driven Communication Automation</label>
-        </div>
-    </section>-->
 
-    <!-- Slideshow container -->
-    <!--    <section class="mt-14">-->
-    <!--        <div class="relative w-full h-2/3 sm:h-1/2 md:h-72" >-->
 
     <section class="h-1/2 md:h-72" id="home">
         <div class="relative w-full h-full">
@@ -112,7 +94,7 @@
             <!--            Slide 1         -->
             <div class="mySlides fade h-full">
                 <div class="flex p-12 h-full"
-                     style="background-image: url('Assets/Images/pexels-dominika-roseclay-1036808.jpg');background-size: cover">
+                     style="background-image: url('Assets/Images/pexels-dominika-roseclay-1036808-copmressed.jpg');background-size: cover">
                     <div class="w-1/2 hidden sm:block"></div>
                     <div class="sm:w-1/2 flex flex-col justify-center items-center gap-y-5">
                         <label class="font-bold text-xl sm:text-3xl text-center">A intelligent way to manage
@@ -127,7 +109,7 @@
             <!--            Slide 2         -->
             <div class="mySlides fade h-full">
                 <div class="flex p-12 h-full"
-                     style="background-image: url('Assets/Images/pexels-felix-mittermeier-956999.jpg');background-size: cover">
+                     style="background-image: url('Assets/Images/pexels-felix-mittermeier-956999-compressed2.jpg');background-size: cover">
                     <div class="w-1/2 hidden sm:block"></div>
                     <div class="sm:w-1/2 flex flex-col justify-center items-center gap-y-5 text-white">
                         <label class="font-bold text-xl sm:text-3xl text-center">Digitize your paper based environment
@@ -155,7 +137,8 @@
 
     <!--    Services-->
     <section name="services" id="services">
-        <h1 class="text-center text-4xl font-bold pt-12 pb-5">What do we do<span class="text-red-600 text-5xl">?</span></h1>
+        <h1 class="text-center text-4xl font-bold pt-12 pb-5">What do we do<span class="text-red-600 text-5xl">?</span>
+        </h1>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row place-items-center w-full p-10">
 
@@ -163,7 +146,54 @@
                 <label>Here is what<br> we do with <br><span class="font-bold text-red-600">Excellence</span></label>
             </div>
 
-            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
+            <!--            BI-->
+            <div name="service"
+                 class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
+                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/digital%20BR.svg">
+                <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
+                    <label class="block text-xl">Business Intelligence</label>
+                    <label class="block text-sm overflow-hidden leading-5 max-h-5 text-justify">We are offering services
+                        to develop
+                        the
+                        Business Intelligence Solution based
+                        on intelligent platforms to take useful meaning out of data for our customers in various
+                        industries.
+                        Our experts are well versed in industry leading solutions like Microsoft BI & etc.
+                    </label>
+                </div>
+            </div>
+
+            <!--            BPA-->
+            <div name="service"
+                 class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
+                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/mechanical-arm%20BR.svg">
+                <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
+                    <label class="block text-xl">Business Process Automation</label>
+                    <label class="block text-sm overflow-hidden leading-5 max-h-5 text-justify">With a strong and solid
+                        experience in automation industry, NlessTech is very well positioned to understand and respond
+                        to your evolving variable data output management and automated delivery needs. Our experts have
+                        the wide range of experience to deliver the BPM solutions.</label>
+                </div>
+            </div>
+
+            <!--            CS-->
+            <div name="service"
+                 class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
+                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/finger-print%20BR.svg">
+                <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
+                    <label class="block text-xl">Capturing Solutions</label>
+                    <label class="block text-sm overflow-hidden leading-5 max-h-5 text-justify">We are dealing with the
+                        industry leader's AI based products in the field of scanning and capturing solutions. Our
+                        experts are confident to deliver the solution for your structured, unstructured and semi
+                        structure document by capturing and extracting the required information and then take into any
+                        line of business applications.
+                    </label>
+                </div>
+            </div>
+
+            <!--            CPMAD-->
+            <div name="service"
+                 class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
                 <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/cross-platform%20BR.svg">
                 <div class="flex flex-col gap-y-2 justify-between border-4 px-7 pt-10 rounded-3xl pb-8 overflow-hidden collapsed">
                     <label class="block text-xl">Cross Platform Mobile Application Development</label>
@@ -180,7 +210,9 @@
                 </div>
             </div>
 
-            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
+            <!--            ECM PS-->
+            <div name="service"
+                 class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
                 <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/data-management%20BR.svg">
                 <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">ECM Professional Services</label>
@@ -193,22 +225,9 @@
                 </div>
             </div>
 
-            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
-                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/digital%20BR.svg">
-                <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
-                    <label class="block text-xl">Business Intelligence</label>
-                    <label class="block text-sm overflow-hidden leading-5 max-h-5 text-justify">We are offering services
-                        to develop
-                        the
-                        Business Intelligence Solution based
-                        on intelligent platforms to take useful meaning out of data for our customers in various
-                        industries.
-                        Our experts are well versed in industry leading solutions like Microsoft BI & etc.
-                    </label>
-                </div>
-            </div>
-
-            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
+            <!--            LC-NC P-->
+            <div name="service"
+                 class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
                 <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/code-svgrepo-com%20BRsvg.svg">
                 <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">Low-Code/No-Code Platform</label>
@@ -221,42 +240,7 @@
                 </div>
             </div>
 
-            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
-                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/finger-print%20BR.svg">
-                <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
-                    <label class="block text-xl">Capturing Solutions</label>
-                    <label class="block text-sm overflow-hidden leading-5 max-h-5 text-justify">We are dealing with the
-                        industry leader's AI based products in the field of scanning and capturing solutions. Our
-                        experts are confident to deliver the solution for your structured, unstructured and semi
-                        structure document by capturing and extracting the required information and then take into any
-                        line of business applications.
-                    </label>
-                </div>
-            </div>
-
-            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
-                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/software-engineering%20BR.svg">
-                <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
-                    <label class="block text-xl">Website Development</label>
-                    <label class="block text-sm overflow-hidden leading-5 min-h-5 max-h-5 text-justify">We
-                        professionally analyze,
-                        design & develop the state-of-the-art website and provide constant support to our customers. We
-                        do offer to develop dynamics and integrated websites that are linked with your business critical
-                        software.</label>
-                </div>
-            </div>
-
-            <div name="service" class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
-                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/mechanical-arm%20BR.svg">
-                <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
-                    <label class="block text-xl">Business Process Automation</label>
-                    <label class="block text-sm overflow-hidden leading-5 max-h-5 text-justify">With a strong and solid
-                        experience in automation industry, NlessTech is very well positioned to understand and respond
-                        to your evolving variable data output management and automated delivery needs. Our experts have
-                        the wide range of experience to deliver the BPM solutions.</label>
-                </div>
-            </div>
-
+            <!--            PC-->
             <div name="service"
                  class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 md:col-span-2 lg:col-span-1 zoom">
                 <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/counseling%20BR.svg">
@@ -269,6 +253,20 @@
                         organization
                         to perform Digital Transformation, Process Improvement, Business Process Re-Engineering,
                         Gap Analysis and IT Consultancy</label>
+                </div>
+            </div>
+
+            <!--            WD-->
+            <div name="service"
+                 class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
+                <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/software-engineering%20BR.svg">
+                <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
+                    <label class="block text-xl">Website Development</label>
+                    <label class="block text-sm overflow-hidden leading-5 min-h-5 max-h-5 text-justify">We
+                        professionally analyze,
+                        design & develop the state-of-the-art website and provide constant support to our customers. We
+                        do offer to develop dynamics and integrated websites that are linked with your business critical
+                        software.</label>
                 </div>
             </div>
 
@@ -452,8 +450,8 @@
             </div>
             <div class="flex flex-col justify-center items-center gap-y-2 md:w-1/2">
                 <div class="flex gap-x-3">
-<!--                    <span class="font-bold text-xl text-red-600">LOGO</span>-->
-<!--                    <span class="font-light text-xl">NLESSTECH</span>-->
+                    <!--                    <span class="font-bold text-xl text-red-600">LOGO</span>-->
+                    <!--                    <span class="font-light text-xl">NLESSTECH</span>-->
                     <img src="Assets/Images/logo-white.svg" width="200">
                 </div>
                 <label>support@nlesstech.com</label>
@@ -645,13 +643,7 @@
             slides[i].style.display = "none";
         }
 
-        // console.log(dots.length)
-        // for (i = 0; i < dots.length; i++) {
-        //     dots[i].className = dots[i].className.replace("active_1", "");
-        // }
-
         slides[productSlideIndex - 1].style.display = "block";
-        // dots[productSlideIndex - 1].classList.add("active_1");
     }
 
     function showProductSlidesAutomatically() {
