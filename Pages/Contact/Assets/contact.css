@@ -1,0 +1,128 @@
+:root {
+    --error: #9d3b3b;
+}
+
+/*For text fields and dropdowns*/
+.textField-label-content, .select-label-content {
+    position: relative;
+    margin-bottom: 5px;
+    display: inline-flex;
+}
+
+.textArea-label-content {
+    position: relative;
+    margin-bottom: 10px;
+    display: inline-flex;
+}
+
+.select {
+    cursor: pointer;
+}
+
+.select, .textField, .textArea {
+    font-size: 12px;
+    display: block;
+    width: 100%;
+    height: 36px;
+    padding: 0 20px;
+    background: #ffffff;
+    color: #323840;
+    border: 1px solid #adb5bd;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.textArea {
+    height: 110px;
+    padding: 10px 20px;
+}
+
+.textField:placeholder-shown::-webkit-input-placeholder, .textArea:placeholder-shown::-webkit-input-placeholder {
+    color: transparent;
+}
+
+/*.textField:placeholder-shown::-webkit-input-placeholder { color:transparent; }*/
+/*.textField:focus::-webkit-input-placeholder {  color: #9CA3AF; }*/
+
+
+/*Outline*/
+.select:focus, .textField:focus, .textArea:focus {
+    outline: none;
+}
+
+/*arrow*/
+select.select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+.textField:not(:placeholder-shown) ~ .textField-label, .textArea:not(:placeholder-shown) ~ .textArea-label { /*Selects every <tf-label> element that is preceded by a <textField> element*/
+    top: -8px;
+    font-size: 13px;
+}
+
+
+/*stopper*/
+.select:not([value=""]):valid ~ .select-label, .textField:focus ~ .textField-label, .textArea:focus ~ .textArea-label { /*after it is selected*/
+    top: -8px;
+    font-size: 13px;
+}
+
+/*pause*/
+/*
+.select[value=""]:focus ~ .select-label { !*when it is focus /clicked *!
+    !*top: 10px;*!
+    font-size: 13px;
+
+}*/
+
+/*Arrow*/
+/*.select:not([multiple]):not([size]) {
+    !*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='6' viewBox='0 0 8 6'%3E%3Cpath id='Path_1' data-name='Path 1' d='M371,294l4,6,4-6Z' transform='translate(-371 -294)' fill='%23003d71'/%3E%3C/svg%3E%0A");*!
+    background-image: url(../Images/vectorFiles/Icons/dropdown-black.svg);
+    background-position: right 15px top 50%;
+    background-repeat: no-repeat;
+}*/
+/*.select {*/
+/*    background-image: url(../Images/vectorFiles/Nagivation/dropdown-black.svg);*/
+/*    background-position: right 15px top 50%;*/
+/*    background-repeat: no-repeat;*/
+/*}*/
+
+
+/* For labels of text fields and dropdowns*/
+.textField-label, .select-label, .textArea-label {
+    color: #1e4c82;
+    font-size: 13px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 15px;
+    top: 08px;
+    padding: 0 5px;
+    background: #fff;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.textArea-label {
+    top: 05px;
+}
+
+
+
+/* For errors of text fields and dropdowns*/
+
+
+.textField-error-input .textField, .select-error-input .select , .textArea-error-input .textArea {
+    border: 2px solid var(--error);
+    color: var(--error);
+}
+
+.textField-error-input .textField-label, .select-error-input .select-label, .textArea-error-input .textArea-label {
+    font-weight: 600;
+    color: var(--error);
+}
