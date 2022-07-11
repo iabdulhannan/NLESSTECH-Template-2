@@ -126,3 +126,16 @@ select.select {
     font-weight: 600;
     color: var(--error);
 }
+
+
+
+/*For icons details*/
+
+
+@media only screen and (max-width: 640px){
+
+    .iconDetails{
+        max-height: 0;
+    }
+
+}

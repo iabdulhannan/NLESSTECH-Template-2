@@ -1,15 +1,22 @@
 <?php
 
 $errorExists = false;
-$mailSent = false;
+$mailSent = null;
 
 if (isset($_POST['sendMessage'])) {
 
     if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['subject']) || empty($_POST['message'])) {
         $errorExists = true;
-        echo '1';
     } else {
-        $mailSent = true;
+        $to = "info@nlesstech.com";
+        $subject = "Demo Request by " . $_POST['name'];
+        $message = $_POST['message'];
+        $headers = "From: do-not-reply@nlesstech.com";
+
+        $response = mail($to, $subject, $message, $headers);
+        if ($response == '1')
+            $mailSent = true;
+
     }
 
 }
@@ -47,7 +54,6 @@ if (isset($_POST['sendMessage'])) {
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        background: rgb(107, 114, 128);
         margin: 0 auto 20px;
     }
 
@@ -60,9 +66,6 @@ if (isset($_POST['sendMessage'])) {
         color: #DC2626;
     }
 
-    .contact-wrap {
-        background: #fff;
-    }
 
     input:focus {
         outline: none;
@@ -83,62 +86,76 @@ if (isset($_POST['sendMessage'])) {
     }
 
 </style>
-<body>
-<h1 class="text-black p-4 flex items-center gap-x-2 cursor-pointer" style="background-color: #f0f0f0"
-    onclick="history.back()">
-    <span class="text-2xl">&#10094;</span>
+<body style="background-color: #f0f0f0">
+<h1 class="text-black p-4 flex items-center gap-x-2 cursor-pointer fixed" onclick="history.back()">
     <a href="../../index.html">
-        Back
+        <span class="text-2xl">&#10094;</span>
+
     </a>
 </h1>
-<section class="md:py-8 md:px-28 bg-gray-50" style="background-color: #f0f0f0">
+<section class="py-8 flex justify-center items-center bg-gray-50" style="background-color: #f0f0f0">
     <div class="container lg:px-40 px-2 md:px-20 mr-auto ml-auto">
+
         <div class="flex justify-center mb-10">
             <div class="md:w-1/2 text-center mb-5">
-                <h2 class="text-3xl">Contact Us </h2>
+                <h2 class="text-3xl">Contact Us</h2>
             </div>
         </div>
+
         <div class="flex justify-center">
             <div class="md:w-full">
                 <div class="w-full">
 
                     <!--					Icons-->
-                    <div class="grid grid-cols-12 mb-2">
 
-                        <div class="col-span-12 sm:col-span-12 md:col-span-4">
-                            <div class="mb-20 w-full text-center">
-                                <div class="icon flex items-center justify-center">
+                    <div class="grid grid-cols-12">
+
+                        <div class="col-span-4">
+                            <div class=" w-full text-center">
+                                <div class="icon flex items-center justify-center bg-gray-400 hover:bg-red-500"
+                                     name="emailAddressLabel">
                                     <span class="fa fa-paper-plane"></span>
                                 </div>
-                                <div class="text">
-                                    <p><span>Email:</span> <a href="mailto:info@yoursite.com">
+                                <div class="hidden sm:block overflow-hidden iconDetails">
+                                    <p>
+                                        <span>Email:</span>
+                                        <a href="mailto:info@yoursite.com">
                                             <img src="Assets/info@nlesstech.com.svg" width="168" class="inline">
-                                        </a></p>
+                                        </a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-span-12 sm:col-span-12 md:col-span-4">
-                            <div class="mb-20 w-full text-center">
-                                <div class="icon flex items-center justify-center">
+                        <div class="col-span-4">
+                            <div class="w-full text-center">
+                                <div class="icon flex items-center justify-center bg-gray-400 hover:bg-red-500"
+                                     name="officeAddressLabel">
                                     <span class="fa fa-map-marker"></span>
                                 </div>
-                                <div class="text-center">
-                                    <p class="text-red-600 text-center"><span class="text-black">Address: </span>Sheikh
-                                        Zayed Road,
-                                        Trade Centre 1
-                                        Aspin Commercial Tower, Office 2701,Dubai, UAE</p>
+                                <div class="hidden sm:block text-center overflow-hidden iconDetails">
+                                    <p class="text-red-600 text-center w-1/2 sm:w-full"><span class="text-black">Address: </span>
+                                        Sheikh Zayed Road, Trade Centre 1 Aspin Commercial Tower, Office 2701, Dubai,
+                                        UAE</p>
+
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-span-12 sm:col-span-12 md:col-span-4">
-                            <div class="mb-20 w-full text-center">
-                                <div class="icon flex items-center justify-center">
+                        <div class="col-span-4">
+                            <div class=" w-full text-center">
+                                <div class="icon flex items-center justify-center bg-gray-400 hover:bg-red-500"
+                                     name="phoneNumberLabel">
                                     <span class="fa fa-phone"></span>
                                 </div>
-                                <div class="text">
-                                    <p><span>Phone:</span> <a href="tel://971557064386">+971557064386</a></p>
+                                <div class="hidden sm:block overflow-hidden iconDetails">
+                                    <p><span>Phone:</span> <a href="tel://+971557064386">+971557064386</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-span-12">
+                            <div class="mb-10 w-full text-center">
+                                <div id="iconDetails" class="flex justify-center sm:hidden overflow-hidden iconDetails">
                                 </div>
                             </div>
                         </div>
@@ -146,20 +163,20 @@ if (isset($_POST['sendMessage'])) {
                     </div>
 
                     <!--					Form-->
-                    <div class="flex flex-wrap mx-0 bg-white">
+                    <div class="flex flex-wrap mx-0 bg-white rounded-2xl">
                         <form method="post" class="w-full md:w-3/5">
-                            <div class="contact-wrap w-full md:p-5 p-4">
-                                <h4 class="mb-4 pl-4 text-xl">Please fill in the details</h4>
+                            <div class="w-full md:p-5 p-4 rounded-2xl">
+                                <h4 class="pl-4 text-xl mb-2">Please fill in the details</h4>
 
-                                <div class="bg-red-100 m-4 rounded flex items-center px-2 text-sm overflow-hidden"
+                                <div class="bg-red-100 m-4 rounded grid grid-cols-12 items-center px-2 text-sm overflow-hidden hidden"
                                      id="error" style="max-height: 0">
-                                    <div class="mx-5">
-                                        <img src="Assets/exclamation-mark.png" width="20">
+                                    <div class="col-span-1 flex justify-center">
+                                        <img src="Assets/exclamation-mark.png" style="width: 20px">
                                     </div>
-                                    <label class="text-red-600"></label>
+                                    <label class="text-red-600 col-span-11"></label>
                                 </div>
 
-                                <div class="bg-green-100 m-4 rounded px-2 flex items-center text-sm overflow-hidden"
+                                <div class="bg-green-100 m-4 rounded px-2 flex items-center text-sm overflow-hidden hidden"
                                      id="sent" style="max-height: 0">
                                     <div class="mx-5">
                                         <img src="Assets/tick.png" width="20">
@@ -168,7 +185,7 @@ if (isset($_POST['sendMessage'])) {
                                 </div>
 
 
-                                <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                <form method="POST" id="contactForm" name="contactForm">
                                     <div class="flex flex-wrap">
 
                                         <div class="w-full lg:w-1/2 px-4 py-2">

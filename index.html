@@ -9,7 +9,7 @@
     <script src="Assets/Scripts/index.js"></script>
     <link href="Assets/Stylesheets/Tailwind.css" rel="stylesheet">
     <link href="Assets/Stylesheets/index.css" rel="stylesheet">
-
+    <link rel="icon" type="image/png" href="Assets/Images/favicon.png">
 </head>
 <body>
 <header class="hidden md:block h-14">
@@ -29,7 +29,8 @@
         <div class="text-xl">
             <!--            <button class="border border-black rounded-md py-1 px-3 hover:underline bg-gray-300 hover:bg-white hover:text-red-600 hover:border-none hover:border-white"-->
             <button class="py-1 px-3 transform transition duration-500 hover:scale-110"
-                    onclick="window.location = 'Pages/Contact/contactForm.php' "><span class="text-red-600">Try</span> a Product
+                    onclick="window.location = 'Pages/Contact/contactForm.php' "><span class="text-red-600">Try</span> a
+                Product
             </button>
         </div>
     </nav>
@@ -87,52 +88,56 @@
 
 <main class="h-full">
 
-
     <section class="h-1/2 md:h-72" id="home">
-        <div class="relative w-full h-full">
+        <div id="carouselExampleCaptions" class="carousel slide relative h-full" data-bs-ride="carousel">
+            <div class="carousel-inner relative w-full overflow-hidden h-full">
 
-            <!--            Slide 1         -->
-            <div class="mySlides fade h-full">
-                <div class="flex p-12 h-full"
-                     style="background-image: url('Assets/Images/pexels-dominika-roseclay-1036808-copmressed.jpg');background-size: cover">
-                    <div class="w-1/2 hidden sm:block"></div>
-                    <div class="sm:w-1/2 flex flex-col justify-center items-center gap-y-5">
-                        <label class="font-bold text-xl sm:text-3xl text-center">A intelligent way to manage
-                            your document centric processes</label>
-                        <!--<a href="#"
-                           class="py-1 px-2 sm:py-2 sm:px-3 text-md sm:text-xl border border-black rounded-lg hover:underline">Know
-                            More</a>-->
+                <div class="carousel-item active relative float-left w-full h-full"
+                     style="background: url('Assets/Images/pexels-felix-mittermeier-956999-compressed2.jpg'); background-size: cover">
+                    <div class="flex w-full justify-center h-full items-center p-12">
+                        <div class="w-1/2 hidden sm:block"></div>
+                        <div class="sm:w-1/2 flex flex-col justify-center items-center gap-y-5 text-white">
+                            <label class="font-bold text-xl sm:text-3xl text-center">
+                                Digitize your paper based environment
+                                by using the industry standard product
+                            </label>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <!--            Slide 2         -->
-            <div class="mySlides fade h-full">
-                <div class="flex p-12 h-full"
-                     style="background-image: url('Assets/Images/pexels-felix-mittermeier-956999-compressed2.jpg');background-size: cover">
-                    <div class="w-1/2 hidden sm:block"></div>
-                    <div class="sm:w-1/2 flex flex-col justify-center items-center gap-y-5 text-white">
-                        <label class="font-bold text-xl sm:text-3xl text-center">Digitize your paper based environment
-                            by using the industry standard product</label>
-                        <!--                        <a href="#"-->
-                        <!--                           class="py-1 px-2 sm:py-2 sm:px-3 text-md sm:text-xl border border-white rounded-lg hover:underline">Know-->
-                        <!--                            More</a>-->
+                </div>
+
+                <div class="carousel-item relative float-left w-full h-full"
+                     style="background: url('Assets/Images/pexels-dominika-roseclay-1036808-copmressed.jpg'); background-size: cover">
+                    <div class="flex w-full justify-center h-full items-center p-12">
+                        <div class="w-1/2 hidden sm:block"></div>
+                        <div class="sm:w-1/2 flex flex-col justify-center items-center gap-y-5">
+                            <label class="font-bold text-xl sm:text-3xl text-center">
+                                A intelligent way to manage your document centric processes
+                            </label>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+
+            </div>
+            <button
+                    class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-start p-3 sm:p-10 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                <span class="inline-block text-3xl font-extralight text-gray-500" aria-hidden="true">❮</span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                    class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-end p-3 sm:p-10 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                <span class="inline-block text-3xl font-extralight text-gray-500" aria-hidden="true">❯</span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <!-- The dots/circles -->
-        <!--
-                <div class="mt-5 text-center">
-                    <span name="dot" class="dot" onclick="currentSlide(1)"></span>
-                    <span name="dot" class="dot" onclick="currentSlide(2)"></span>
-                </div>
-        -->
-
     </section>
 
     <!--    Services-->
@@ -147,8 +152,8 @@
             </div>
 
             <!--            BI-->
-            <div name="service"
-                 class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
+            <div name="service" id="BIS"
+                 class="service relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
                 <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/digital%20BR.svg">
                 <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">Business Intelligence</label>
@@ -165,7 +170,7 @@
 
             <!--            BPA-->
             <div name="service"
-                 class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
+                 class="service relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
                 <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/mechanical-arm%20BR.svg">
                 <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">Business Process Automation</label>
@@ -242,7 +247,7 @@
 
             <!--            PC-->
             <div name="service"
-                 class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 md:col-span-2 lg:col-span-1 zoom">
+                 class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
                 <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/counseling%20BR.svg">
                 <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">Professional Consultancy</label>
@@ -258,7 +263,7 @@
 
             <!--            WD-->
             <div name="service"
-                 class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 zoom">
+                 class="relative flex flex-col justify-center text-center items-center w-full p-5 pb-6 md:col-span-2 lg:col-span-1 zoom">
                 <img class="absolute bg-white mx-5 w-1/3 h-11 sm:h-16" src="Assets/Icons/software-engineering%20BR.svg">
                 <div class="flex flex-col justify-between gap-y-2 border-4 px-7 pt-10 rounded-3xl collapsed pb-8 overflow-hidden">
                     <label class="block text-xl">Website Development</label>
@@ -275,161 +280,113 @@
     </section>
 
 
-    <section name="products" id="products" class=" p-5">
-        <!--        <div class="slideshow-container w-full sm:w-3/4 xl:max-w-1/2 px-4 min-h-full">-->
-        <div class="slideshow-container w-full sm:w-3/4 md:max-w-1/2 lg:max-w-1/3 px-4">
+    <!--    Products-->
+    <section class="p-5 flex justify-center">
+        <div id="carouselExampleCaptions2"
+             class="carousel slide relative h-full w-full sm:w-3/4 md:max-w-1/2 lg:max-w-1/3 min-h-full"
+             data-bs-ride="carousel">
+            <div class="carousel-inner relative w-full overflow-hidden h-full px-4">
 
-            <!--            Objectif Lune-->
-            <div class="myProducts fade h-full" style="display: block;">
-                <div class="w-full px-4">
-                    <div class="bg-white rounded-md  h-full">
-                        <div class="mb-10 text-black h-full">
-                            <!--                            <div class="flex flex-col justify-between items-center px-7 sm:px-14 py-4 pb-16 h-full relative">-->
-                            <div class="flex flex-col justify-between items-center  h-full relative">
-                                <div class="max-h-20 min-h-20 flex justify-center">
-                                    <img src="Assets/Icons/objectifLuneLogo.svg" class="mb-3 h-full w-3/4 sm:w-2/3">
+                <div class="carousel-item active relative float-left w-full h-full">
+                    <div class="myProducts h-full">
+                        <div class="w-full px-4">
+                            <div class="bg-white rounded-md  h-full">
+                                <div class="mb-10 text-black h-full">
+                                    <div class="flex flex-col justify-between items-center  h-full relative">
+                                        <div class="max-h-20 min-h-20 flex justify-center">
+                                            <img src="Assets/Icons/objectifLuneLogo.svg"
+                                                 class="mb-3 h-full w-3/4 sm:w-2/3">
+                                        </div>
+                                        <a class="inline-flex justify-center text-gray-500 items-center text-sm transition transform hover:underline hover:scale-105 absolute bottom-2.5"
+                                           href="https://planetpress.objectiflune.com/en/whatitdoes/automatebusiness"
+                                           target="_blank">Learn More
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                 class="mx-2 h-6 w-6 hover:w-10 hover:translate-x-5 text-black" fill="none"
+                                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                      d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
-                                <!--
-
-                                                                <p class="text-base text-gray-500 font-medium text-justify">With PlanetPress
-                                                                    Connect, you can send an email or a printed communication in a single job. This is
-                                                                    why PlanetPress Connect is built an adaptive and customisable toolset that you can
-                                                                    play with. It's what we are all about.
-                                                                </p>
-
-                                                                <p class="text-base text-gray-500 font-medium text-justify">
-                                                                    Adding variable scan marks makes it possible to automate envelope stuffing using
-                                                                    inserters and/or folders, even insert dynamic pages for personalised mailings.
-                                                                    PlanetPress Connect can recognise information intended for the same person, merges
-                                                                    it into a single envelope, and helps you save you on postage.
-                                                                </p>
-
-                                                                <p class="text-base text-gray-500 font-medium text-justify">
-                                                                    With PlanetPress Connect, archiving is automatic. The software creates an index file
-                                                                    for any document created, making it easy to retrieve information. The indexing
-                                                                    information can be put in a barcode, making it possible to file the document in the
-                                                                    desired location automatically when scanning.
-                                                                </p>
-                                -->
-
-                                <a class="inline-flex justify-center items-center text-indigo-400 text-sm transition transform hover:underline hover:scale-105 absolute bottom-2.5"
-                                   href="https://planetpress.objectiflune.com/en/whatitdoes/automatebusiness"
-                                   target="_blank">Learn More
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                         class="mx-2 h-6 w-6 hover:w-10 hover:translate-x-5" fill="none"
-                                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                              d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                                    </svg>
-                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!--SER Group-->
-            <div class="myProducts fade h-full" style="display: block;">
-                <div class="w-full px-4">
-                    <div class="bg-white h-full">
-                        <!--                    <div class="bg-white border-solid border-2 rounded-md shadow-md h-full">-->
-                        <div class="mb-10 text-black h-full">
-                            <div class="flex flex-col justify-between items-center px-7 sm:px-14 py-4 pb-16 h-full relative">
-                                <div class="max-h-20 min-h-20 flex justify-center">
-                                    <img src="Assets/Icons/serGroupLogo.svg" class="mb-3 h-full">
+                <div class="carousel-item  relative float-left w-full h-full">
+                    <div class="myProducts h-full">
+                        <div class="w-full px-4">
+                            <div class="bg-white rounded-md  h-full">
+                                <div class="mb-10 text-black h-full">
+                                    <div class="flex flex-col justify-between items-center h-full">
+                                        <div class="max-h-20 min-h-20 flex justify-center">
+                                            <img src="Assets/Icons/serGroupLogo.png" class="mb-3 h-full">
+                                        </div>
+                                        <a class="inline-flex justify-center text-gray-500 items-center text-sm transition transform hover:underline hover:scale-105 absolute bottom-2.5"
+                                           href="https://www.sergroup.com/" target="_blank">Learn More
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                 class="mx-2 h-6 w-6 hover:w-10 hover:translate-x-5 text-black" fill="none"
+                                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                      d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
-                                <!--
-
-                                                                <p class="text-base text-gray-500 font-medium text-justify">Work on and manage all
-                                                                    documents digitally: This reduces lead times, expedites decision-making and prevents
-                                                                    costly errors.
-                                                                </p>
-
-                                                                <p class="text-base text-gray-500 font-medium text-justify">
-                                                                    Reduce the time and effort needed to fulfill and document compliance requirements
-                                                                    and help prevent sanctions as a result.
-                                                                </p>
-
-                                                                <p class="text-base text-gray-500 font-medium text-justify">
-                                                                    Automate your document filing and distribution workflows and free up resources for
-                                                                    service, order processing etc.
-                                                                </p>
-                                -->
-
-                                <a class="inline-flex justify-center items-center text-sm transition transform hover:underline hover:scale-105 absolute bottom-2.5"
-                                   href="https://www.sergroup.com/" target="_blank">Learn More
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                         class="mx-2 h-6 w-6 hover:w-10 hover:translate-x-5" fill="none"
-                                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                              d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                                    </svg>
-                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!--            M-Files-->
-            <div class="myProducts fade h-full" style="display: block;">
-                <div class="w-full px-4">
-                    <!--                    <div class="bg-white border-solid border-2 rounded-md shadow-md h-full">-->
-                    <div class="bg-white h-full">
-                        <div class="mb-10 text-black h-full">
-                            <div class="flex flex-col justify-between items-center px-7 sm:px-14 py-4 pb-16 h-full relative">
-                                <div class="max-h-20 min-h-20 flex justify-center">
-                                    <img src="Assets/Icons/mFilesLogo.svg" class="mb-3 h-full">
+                <div class="carousel-item  relative float-left w-full h-full">
+                    <div class="myProducts h-full">
+                        <div class="w-full px-4">
+                            <div class="bg-white rounded-md  h-full">
+                                <div class="mb-10 text-black h-full">
+                                    <div class="flex flex-col justify-between items-center h-full">
+                                        <div class="max-h-20 min-h-20 flex justify-center">
+                                            <img src="Assets/Icons/mFilesLogo.svg" class="mb-3 h-full">
+                                        </div>
+                                        <a class="inline-flex justify-center text-gray-500 items-center text-sm transition transform hover:underline hover:scale-105 absolute bottom-2.5"
+                                           href="https://www.m-files.com/" target="_blank">Learn More
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                 class="mx-2 h-6 w-6 hover:w-10 hover:translate-x-5 text-black" fill="none"
+                                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                      d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
-                                <!--
-
-                                                                <p class="text-base text-gray-500 font-medium text-justify">A contract in a folder, a
-                                                                    project document in your inbox, customer details in the CRM, or documents that need
-                                                                    to be shared with clients: M-Files connects it all and automatically delivers the
-                                                                    content you need, when and where you need it – no matter what it is or where it is
-                                                                    saved.
-                                                                </p>
-
-                                                                <p class="text-base text-gray-500 font-medium text-justify">
-                                                                    Simplify document-intensive tasks, minimize human error, and streamline processes.
-                                                                    Information flows easily and securely, keeping business and timelines on track.
-                                                                </p>
-
-                                                                <p class="text-base text-gray-500 font-medium text-justify">
-                                                                    Strike the right balance between access and security with advanced permissions and
-                                                                    encryption. Your staff and clients get the information they need, while sensitive
-                                                                    data stay safe and controlled.
-                                                                </p>
-                                -->
-
-                                <a class="inline-flex justify-center items-center text-sm transition transform hover:underline hover:scale-105 absolute bottom-2.5"
-                                   href="https://www.m-files.com/" target="_blank">Learn More
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                         class="mx-2 h-6 w-6 hover:w-10 hover:translate-x-5" fill="none"
-                                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                              d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                                    </svg>
-                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
 
-            <!-- Next and previous buttons -->
-
-            <div class="inline-flex justify-between w-full">
-                <a class="prevProd bg-gray-300 h-10 flex items-center sm:h-14"
-                   onclick="plusProductSlide(-1)" style="left: -9px">❮</a>
-                <a class="nextProd bg-gray-300 h-10 flex items-center sm:h-14" onclick="plusProductSlide(1)"
-                   style="right: -9px">❯</a>
-            </div>
-
-            <br>
-
+            <!--            Buttons-->
+            <button
+                    class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-start p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions2"
+                    data-bs-slide="prev">
+                <span class="inline-block text-3xl font-extralight text-gray-500" aria-hidden="true">❮</span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                    class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-end p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions2"
+                    data-bs-slide="next">
+                <span class="inline-block text-3xl font-extralight text-gray-500" aria-hidden="true">❯</span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </section>
+
 
     <footer class="bottom-0 bg-gray-700 text-white">
         <div class="flex flex-col md:flex-row p-12 h-auto space-y-10">
@@ -455,15 +412,15 @@
                     <img src="Assets/Images/logo-white.svg" width="200">
                 </div>
                 <label>support@nlesstech.com</label>
-                <div class="flex w-2/6 md:w-1/3 justify-around my-5">
+                <div class="flex w-3/6 sm:w-2/6 md:w-1/3 justify-around my-5 gap-3">
                     <a class="w-1/3 p-1 flex justify-center cursor-pointer">
-                        <img src="Assets/Icons/instagramIcon-white.svg" class="w-1/2">
+                        <img src="Assets/Icons/instagramIcon-white.svg" class="w-full sm:w-1/2">
                     </a>
-                    <a class="w-1/3 p-1 flex justify-center cursor-pointer">
-                        <img src="Assets/Icons/twitterIconWhite.svg" class="w-1/2">
+                    <a class="w-1/3 p-1  flex justify-center cursor-pointer">
+                        <img src="Assets/Icons/twitterIconWhite.svg" class="w-full sm:w-1/2">
                     </a>
-                    <a class="w-1/3 p-1 flex justify-center cursor-pointer">
-                        <img src="Assets/Icons/linkedinIconWhite.svg" class="w-1/2">
+                    <a class="w-1/3 p-1  flex justify-center cursor-pointer">
+                        <img src="Assets/Icons/linkedinIconWhite.svg" class="w-full sm:w-1/2">
                     </a>
                 </div>
             </div>
@@ -491,66 +448,10 @@
         </div>
     </div>
 </section>
-
-
+<script src="node_modules/tw-elements/dist/js/index.min.js"></script>
 </body>
 </html>
 <script>
-    // var productSlideIndex = 1;
-    // showProductSlides(productSlideIndex);
-
-    let slideIndex = 0;
-    showSlidesAutomatically();
-
-    // Next/previous controls
-    function plusSlides(n) {
-        moveSlides(slideIndex += n);
-    }
-
-    // Thumbnail image controls
-    function currentSlide(n) {
-        moveSlides(slideIndex = n);
-    }
-
-    function moveSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByName("dot");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-
-        // console.log(dots.length)
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" activeNext", "");
-        }
-
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].classList.add("activeNext");
-    }
-
-
-    function showSlidesAutomatically() {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-            slideIndex = 1
-        }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlidesAutomatically, 4000); // Change image every 4 seconds
-    }
-
-    // });
     $('div[name="service"] > div').click(function () {
         // $(this).toggleClass("sm:h-44")
 
@@ -614,50 +515,24 @@
     })
 
 </script>
+
 <script>
-    var productSlideIndex = 1;
-    // showProductSlides(productSlideIndex);
-    showProductSlidesAutomatically()
+    // checking whether fully visible
+    var elements = document.querySelectorAll('.service');
+    // var element = document.querySelector('#BIS');
 
-    // Next/previous controls
-    function plusProductSlide(n) {
-        showProductSlides(productSlideIndex += n);
-    }
+    window.addEventListener('scroll', function () {
 
-    // Thumbnail image controls
-    function currentProductSlide(n) {
-        showProductSlides(productSlideIndex = n);
-    }
+        elements.forEach((element) => {
+            var position = element.getBoundingClientRect();
+            if (position.top >= 0 && position.bottom <= window.innerHeight) {
+                // if (position.top < window.innerHeight && position.bottom >= 0) {
+                element.classList.add('show')
+            } else {
+                element.classList.remove('show')
+            }
+        })
+    })
 
-    function showProductSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("myProducts");
-        // var dots = document.getElementsByName("dotProduct");
-        if (n > slides.length) {
-            productSlideIndex = 1
-        }
-        if (n < 1) {
-            productSlideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-
-        slides[productSlideIndex - 1].style.display = "block";
-    }
-
-    function showProductSlidesAutomatically() {
-        let i;
-        let slides = document.getElementsByClassName("myProducts");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        productSlideIndex++;
-        if (productSlideIndex > slides.length) {
-            productSlideIndex = 1
-        }
-        slides[productSlideIndex - 1].style.display = "block";
-        setTimeout(showProductSlidesAutomatically, 4000); // Change image every 4 seconds
-    }
 
 </script>
