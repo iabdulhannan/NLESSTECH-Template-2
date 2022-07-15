@@ -87,13 +87,17 @@ $(document).ready(function () {
         // enableSubmit()
     })
 
-    if (mailSent) {
+
+    console.log(mailSent + 'before')
+    if (mailSent == 'Sent') {
         $("#sent").removeClass('hidden').animate({
             maxHeight: '40px',
             paddingTop: '0.5rem',
             paddingBottom: '0.5rem'
         }, 1000);
-    } else if (mailSent == 'false') {
+        console.log(mailSent + 'in true')
+    } else if (mailSent == 'Not Sent') {
+        console.log(mailSent)
         showError("Something went wrong, please try again. If the issue persists, email us at info@nlesstech.com or try again later")
     }
 

@@ -13,9 +13,11 @@ if (isset($_POST['sendMessage'])) {
         $message = $_POST['message'];
         $headers = "From: do-not-reply@nlesstech.com";
 
-        $response = mail($to, $subject, $message, $headers);
+        $response = @mail($to, $subject, $message, $headers);
         if ($response == '1')
-            $mailSent = true;
+            $mailSent = 'Sent';
+        else
+            $mailSent = 'Not Sent';
 
     }
 
@@ -29,15 +31,17 @@ if (isset($_POST['sendMessage'])) {
     <title>ENDLESSTECH - Contact Us</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="../../Assets/Images/favicon.png">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="../../Assets/Stylesheets/TailwindMinified.css" rel="stylesheet">
     <link href="../../Assets/Stylesheets/index.css" rel="stylesheet">
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src='https://unpkg.com/jquery/dist/jquery.min.js'></script>
     <link href="Assets/contact.css" rel="stylesheet">
     <script src="Assets/contactScript.js"></script>
     <script>
         setErrorStatus(<?php echo json_encode($errorExists); ?>);
+        console.log(<?php echo json_encode($mailSent); ?>)
         setSentStatus(<?php echo json_encode($mailSent); ?>);
     </script>
 </head>
@@ -83,6 +87,10 @@ if (isset($_POST['sendMessage'])) {
     textarea {
         overflow: auto;
         resize: vertical;
+    }
+
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px white inset;
     }
 
 </style>
@@ -170,10 +178,10 @@ if (isset($_POST['sendMessage'])) {
 
                                 <div class="bg-red-100 m-4 rounded grid grid-cols-12 items-center px-2 text-sm overflow-hidden hidden"
                                      id="error" style="max-height: 0">
-                                    <div class="col-span-1 flex justify-center">
+                                    <div class="col-span-2 sm:col-span-1 flex justify-center">
                                         <img src="Assets/exclamation-mark.png" style="width: 20px">
                                     </div>
-                                    <label class="text-red-600 col-span-11"></label>
+                                    <label class="text-red-600 col-span-10 sm:col-span-11"></label>
                                 </div>
 
                                 <div class="bg-green-100 m-4 rounded px-2 flex items-center text-sm overflow-hidden hidden"
@@ -185,7 +193,7 @@ if (isset($_POST['sendMessage'])) {
                                 </div>
 
 
-                                <form method="POST" id="contactForm" name="contactForm">
+                                <form method="POST" id="contactForm" name="contactForm" autocomplete="on">
                                     <div class="flex flex-wrap">
 
                                         <div class="w-full lg:w-1/2 px-4 py-2">
