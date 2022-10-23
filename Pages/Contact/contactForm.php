@@ -31,7 +31,7 @@ if (isset($_POST['sendMessage'])) {
     <title>ENDLESSTECH - Contact Us</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" href="../../Assets/Images/favicon.png">
+    <link rel="icon" type="image/png" href="../../Assets/Images/newFavicon.png">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="../../Assets/Stylesheets/TailwindMinified.css" rel="stylesheet">
@@ -41,7 +41,6 @@ if (isset($_POST['sendMessage'])) {
     <script src="Assets/contactScript.js"></script>
     <script>
         setErrorStatus(<?php echo json_encode($errorExists); ?>);
-        console.log(<?php echo json_encode($mailSent); ?>)
         setSentStatus(<?php echo json_encode($mailSent); ?>);
     </script>
 </head>
@@ -143,8 +142,9 @@ if (isset($_POST['sendMessage'])) {
                                 </div>
                                 <div class="hidden sm:block text-center overflow-hidden iconDetails">
                                     <p class="text-red-600 text-center w-1/2 sm:w-full"><span class="text-black">Address: </span>
-                                        Sheikh Zayed Road, Trade Centre 1 Aspin Commercial Tower, Office 2701, Dubai,
-                                        UAE</p>
+                                        ASPIN Commercial Tower, 29th Floor, Midtown Business Center, Office 20, 106 Sheikh Zayed Road,
+                                        P.O Box 52460, Dubai U.A.E
+                                    </p>
 
                                 </div>
                             </div>
@@ -246,7 +246,7 @@ if (isset($_POST['sendMessage'])) {
                             </div>
                         </form>
                         <div class="w-full md:w-2/5 flex items-center justify-center p-8">
-                            <img src="../../Assets/Images/logo.svg">
+                            <img src="../../Assets/Images/logo_new.png">
                         </div>
                     </div>
                 </div>

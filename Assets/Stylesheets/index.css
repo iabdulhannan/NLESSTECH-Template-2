@@ -3,6 +3,7 @@
     --nLessRed: #DC2626; /*text-red-600*/
     --nLessGray: rgb(156, 163, 175);
     --nLessDarkGray: rgb(107, 114, 128);
+    --nLessGradient: linear-gradient(90deg, rgba(170,32,204,1) 43%, rgba(69,93,214,1) 79%);
 }
 
 @font-face {
